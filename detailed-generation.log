@@ -1,30 +1,60 @@
-Starting detailed documentation generation at  2 Şub 2026 Pts +03 19:34:23
+Starting detailed documentation generation at  2 Şub 2026 Pts +03 19:45:41
 Processing: gfx-airdrop
   Completed: gfx-airdrop
+Processing: gfx-arena
+  Completed: gfx-arena
+Processing: gfx-attachment
+  Completed: gfx-attachment
 Processing: gfx-attachment-remake
   Completed: gfx-attachment-remake
+Processing: gfx-autopilot
+  Completed: gfx-autopilot
 Processing: gfx-banking
   Completed: gfx-banking
+Processing: gfx-busjob
+  Completed: gfx-busjob
 Processing: gfx-chat
   Completed: gfx-chat
+Processing: gfx-chickenjob
+  Completed: gfx-chickenjob
+Processing: gfx-christmastruck
+  Completed: gfx-christmastruck
 Processing: gfx-cowjob
   Completed: gfx-cowjob
+Processing: gfx-crafting
+  Completed: gfx-crafting
 Processing: gfx-crafting_aty
   Completed: gfx-crafting_aty
+Processing: gfx-crew
+  Completed: gfx-crew
+Processing: gfx-cuffsystem
+  Completed: gfx-cuffsystem
 Processing: gfx-dailygift
   Completed: gfx-dailygift
+Processing: gfx-deathcam
+  Completed: gfx-deathcam
 Processing: gfx-deathcamv2
   Completed: gfx-deathcamv2
+Processing: gfx-deathlog
+  Completed: gfx-deathlog
+Processing: gfx-delivery
+  Completed: gfx-delivery
 Processing: gfx-dialog
   Completed: gfx-dialog
+Processing: gfx-docs
+  Completed: gfx-docs
 Processing: gfx-dui-lb
   Completed: gfx-dui-lb
 Processing: gfx-effects
   Completed: gfx-effects
 Processing: gfx-emp
   Completed: gfx-emp
+Processing: gfx-evidence
+  Completed: gfx-evidence
 Processing: gfx-garage
   Completed: gfx-garage
+Processing: gfx-giveaway
+  Completed: gfx-giveaway
 Processing: gfx-gps
   Completed: gfx-gps
 Processing: gfx-gunmenu
@@ -37,12 +67,18 @@ Processing: gfx-hitmarker
   Completed: gfx-hitmarker
 Processing: gfx-housecleaning
   Completed: gfx-housecleaning
+Processing: gfx-hud
+  Completed: gfx-hud
 Processing: gfx-hud_aty
   Completed: gfx-hud_aty
+Processing: gfx-interact
+  Completed: gfx-interact
 Processing: gfx-killfeed
   Completed: gfx-killfeed
 Processing: gfx-kit
   Completed: gfx-kit
+Processing: gfx-leaderboard
+  Completed: gfx-leaderboard
 Processing: gfx-loading
   Completed: gfx-loading
 Processing: gfx-loadingscreen_aty
@@ -53,6 +89,8 @@ Processing: gfx-lootbag
   Completed: gfx-lootbag
 Processing: gfx-lowrider
   Completed: gfx-lowrider
+Processing: gfx-lumberjack
+  Completed: gfx-lumberjack
 Processing: gfx-marker
   Completed: gfx-marker
 Processing: gfx-marketplace
@@ -63,30 +101,54 @@ Processing: gfx-notify
   Completed: gfx-notify
 Processing: gfx-pausemenu
   Completed: gfx-pausemenu
+Processing: gfx-pawnshop
+  Completed: gfx-pawnshop
 Processing: gfx-pilotjob
   Completed: gfx-pilotjob
 Processing: gfx-propspawner
   Completed: gfx-propspawner
+Processing: gfx-pvpchat
+  Completed: gfx-pvpchat
+Processing: gfx-pvphud
+  Completed: gfx-pvphud
+Processing: gfx-pvpshop
+  Completed: gfx-pvpshop
+Processing: gfx-racing
+  Completed: gfx-racing
 Processing: gfx-radio
   Completed: gfx-radio
 Processing: gfx-redzone
   Completed: gfx-redzone
+Processing: gfx-safezone
+  Completed: gfx-safezone
 Processing: gfx-secondhand
   Completed: gfx-secondhand
 Processing: gfx-shop
   Completed: gfx-shop
 Processing: gfx-spawnselector
   Completed: gfx-spawnselector
+Processing: gfx-squad
+  Completed: gfx-squad
+Processing: gfx-squad-remake
+  Completed: gfx-squad-remake
 Processing: gfx-stormbreaker
   Completed: gfx-stormbreaker
 Processing: gfx-tabu
   Completed: gfx-tabu
+Processing: gfx-tebexshop
+  Completed: gfx-tebexshop
 Processing: gfx-trade
   Completed: gfx-trade
+Processing: gfx-truckerjob
+  Completed: gfx-truckerjob
 Processing: gfx-truthordare
   Completed: gfx-truthordare
 Processing: gfx-vehicleitems
   Completed: gfx-vehicleitems
 Processing: gfx-vehicleshop
   Completed: gfx-vehicleshop
-Detailed documentation generation completed at  2 Şub 2026 Pts +03 19:37:46
+Processing: gfx-vote
+  Completed: gfx-vote
+Processing: gfx-weed
+  Completed: gfx-weed
+Detailed documentation generation completed at  2 Şub 2026 Pts +03 19:50:29
