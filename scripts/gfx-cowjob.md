@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-cowjob klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-cowjob klasörünü resources/ dizinine kopyalayın
+cp -r gfx-cowjob /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -16,16 +17,39 @@ ensure gfx-cowjob
 
 ## Konfigürasyon
 
+*Konfigürasyon dosyası bulunamadı*
+
+---
+
+## Events
+
+*Event bulunamadı*
+
+---
+
+## Exports
+
+```lua
+exports['gfx-cowjob']:es_extended(...)
+exports['gfx-cowjob']:qb-core(...)
+```
+
+---
+
+## Komutlar
+
+*Komut bulunamadı*
+
 ---
 
 ## Özellikler
 
-- Client-side işlemler
-- Server-side işlemler
+- ✅ Client-side
+- ✅ Server-side
 
 ---
 
-## Notlar
+## Kaynak
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-cowjob
+- **GitHub:** https://github.com/gfx-fivem/gfx-cowjob
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)

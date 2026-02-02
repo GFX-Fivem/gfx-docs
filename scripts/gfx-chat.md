@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-chat klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-chat klasörünü resources/ dizinine kopyalayın
+cp -r gfx-chat /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -16,15 +17,53 @@ ensure gfx-chat
 
 ## Konfigürasyon
 
+*Konfigürasyon dosyası bulunamadı*
+
+---
+
+## Events
+
+### Client Events
+
+```lua
+-- chat:addMessage
+TriggerEvent('chat:addMessage', ...)
+
+-- gfx-chat:addMessage
+TriggerEvent('gfx-chat:addMessage', ...)
+
+-- gfx-chat:clear
+TriggerEvent('gfx-chat:clear', ...)
+
+```
+
+---
+
+## Exports
+
+```lua
+exports['gfx-chat']:gfx-base(...)
+```
+
+---
+
+## Komutlar
+
+| Komut | Açıklama |
+|-------|----------|
+| `/changechatmode` | - |
+| `/clear` | - |
+| `/openchat` | - |
+
 ---
 
 ## Özellikler
 
-- Client-side işlemler
+- ✅ Client-side
 
 ---
 
-## Notlar
+## Kaynak
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-chat
+- **GitHub:** https://github.com/gfx-fivem/gfx-chat
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)

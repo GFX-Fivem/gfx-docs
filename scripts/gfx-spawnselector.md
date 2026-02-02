@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-spawnselector klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-spawnselector klasörünü resources/ dizinine kopyalayın
+cp -r gfx-spawnselector /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -12,11 +13,14 @@ gfx-spawnselector klasörünü resources/ dizinine kopyalayın
 ensure gfx-spawnselector
 ```
 
+### 3. Bağımlılıklar
+- ox_inventory veya ox_lib (tespit edildi)
+
 ---
 
 ## Konfigürasyon
 
-### Client Config
+### client_config.lua
 
 ```lua
 Config = {
@@ -74,7 +78,7 @@ Citizen.CreateThread(function()
 end)
 ```
 
-### Server Config
+### server_config.lua
 
 ```lua
 Config = {
@@ -89,15 +93,47 @@ Config = {
 
 ---
 
-## Özellikler
+## Events
 
-- NUI arayüzü
-- Client-side işlemler
-- Server-side işlemler
+*Event bulunamadı*
 
 ---
 
-## Notlar
+## Exports
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-spawnselector
+```lua
+exports['gfx-spawnselector']:codem-inventory(...)
+exports['gfx-spawnselector']:es_extended(...)
+exports['gfx-spawnselector']:gfx-inventory(...)
+exports['gfx-spawnselector']:ghmattimysql(...)
+exports['gfx-spawnselector']:ox_inventory(...)
+exports['gfx-spawnselector']:oxmysql(...)
+exports['gfx-spawnselector']:ps-inventory(...)
+exports['gfx-spawnselector']:qb-core(...)
+exports['gfx-spawnselector']:qb-inventory(...)
+exports['gfx-spawnselector']:qs-inventory(...)
+```
+
+---
+
+## Komutlar
+
+| Komut | Açıklama |
+|-------|----------|
+| `/boiler` | - |
+| `/spawnselector` | - |
+
+---
+
+## Özellikler
+
+- ✅ NUI Arayüzü
+- ✅ Client-side
+- ✅ Server-side
+
+---
+
+## Kaynak
+
+- **GitHub:** https://github.com/gfx-fivem/gfx-spawnselector
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)

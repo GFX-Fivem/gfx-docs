@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-hitmarker klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-hitmarker klasörünü resources/ dizinine kopyalayın
+cp -r gfx-hitmarker /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -16,9 +17,34 @@ ensure gfx-hitmarker
 
 ## Konfigürasyon
 
+*Konfigürasyon dosyası bulunamadı*
+
 ---
 
-## Notlar
+## Events
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-hitmarker
+*Event bulunamadı*
+
+---
+
+## Exports
+
+*Export bulunamadı*
+
+---
+
+## Komutlar
+
+*Komut bulunamadı*
+
+---
+
+## Özellikler
+
+
+---
+
+## Kaynak
+
+- **GitHub:** https://github.com/gfx-fivem/gfx-hitmarker
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)

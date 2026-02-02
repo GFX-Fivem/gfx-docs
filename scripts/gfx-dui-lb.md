@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-dui-lb klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-dui-lb klasörünü resources/ dizinine kopyalayın
+cp -r gfx-dui-lb /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -12,11 +13,14 @@ gfx-dui-lb klasörünü resources/ dizinine kopyalayın
 ensure gfx-dui-lb
 ```
 
+### 3. Bağımlılıklar
+- ox_inventory veya ox_lib (tespit edildi)
+
 ---
 
 ## Konfigürasyon
 
-### Client Config
+### client_config.lua
 
 ```lua
 Config = {
@@ -39,7 +43,7 @@ Citizen.CreateThread(function()
 end)
 ```
 
-### Server Config
+### server_config.lua
 
 ```lua
 Config = {
@@ -54,15 +58,46 @@ Config = {
 
 ---
 
-## Özellikler
+## Events
 
-- NUI arayüzü
-- Client-side işlemler
-- Server-side işlemler
+*Event bulunamadı*
 
 ---
 
-## Notlar
+## Exports
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-dui-lb
+```lua
+exports['gfx-dui-lb']:codem-inventory(...)
+exports['gfx-dui-lb']:es_extended(...)
+exports['gfx-dui-lb']:gfx-inventory(...)
+exports['gfx-dui-lb']:ghmattimysql(...)
+exports['gfx-dui-lb']:ox_inventory(...)
+exports['gfx-dui-lb']:oxmysql(...)
+exports['gfx-dui-lb']:ps-inventory(...)
+exports['gfx-dui-lb']:qb-core(...)
+exports['gfx-dui-lb']:qb-inventory(...)
+exports['gfx-dui-lb']:qs-inventory(...)
+```
+
+---
+
+## Komutlar
+
+| Komut | Açıklama |
+|-------|----------|
+| `/boiler` | - |
+
+---
+
+## Özellikler
+
+- ✅ NUI Arayüzü
+- ✅ Client-side
+- ✅ Server-side
+
+---
+
+## Kaynak
+
+- **GitHub:** https://github.com/gfx-fivem/gfx-dui-lb
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)

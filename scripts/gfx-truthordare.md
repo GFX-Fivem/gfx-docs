@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-truthordare klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-truthordare klasörünü resources/ dizinine kopyalayın
+cp -r gfx-truthordare /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -16,16 +17,51 @@ ensure gfx-truthordare
 
 ## Konfigürasyon
 
+*Konfigürasyon dosyası bulunamadı*
+
+---
+
+## Events
+
+### Client Events
+
+```lua
+-- truthordare:client:message
+TriggerEvent('truthordare:client:message', ...)
+
+-- truthordare:client:set
+TriggerEvent('truthordare:client:set', ...)
+
+```
+
+---
+
+## Exports
+
+```lua
+exports['gfx-truthordare']:es_extended(...)
+exports['gfx-truthordare']:qb-core(...)
+```
+
+---
+
+## Komutlar
+
+| Komut | Açıklama |
+|-------|----------|
+| `/createtd` | - |
+| `/jointd` | - |
+
 ---
 
 ## Özellikler
 
-- Client-side işlemler
-- Server-side işlemler
+- ✅ Client-side
+- ✅ Server-side
 
 ---
 
-## Notlar
+## Kaynak
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-truthordare
+- **GitHub:** https://github.com/gfx-fivem/gfx-truthordare
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)

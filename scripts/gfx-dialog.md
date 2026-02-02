@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-dialog klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-dialog klasörünü resources/ dizinine kopyalayın
+cp -r gfx-dialog /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -16,16 +17,36 @@ ensure gfx-dialog
 
 ## Konfigürasyon
 
+*Konfigürasyon dosyası bulunamadı*
+
+---
+
+## Events
+
+*Event bulunamadı*
+
+---
+
+## Exports
+
+*Export bulunamadı*
+
+---
+
+## Komutlar
+
+*Komut bulunamadı*
+
 ---
 
 ## Özellikler
 
-- Client-side işlemler
-- Server-side işlemler
+- ✅ Client-side
+- ✅ Server-side
 
 ---
 
-## Notlar
+## Kaynak
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-dialog
+- **GitHub:** https://github.com/gfx-fivem/gfx-dialog
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)

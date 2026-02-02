@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-shop klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-shop klasörünü resources/ dizinine kopyalayın
+cp -r gfx-shop /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -16,16 +17,47 @@ ensure gfx-shop
 
 ## Konfigürasyon
 
+*Konfigürasyon dosyası bulunamadı*
+
+---
+
+## Events
+
+### Client Events
+
+```lua
+-- gfx-npcshop:reList
+TriggerEvent('gfx-npcshop:reList', ...)
+
+-- gfx-shop:OpenMenu
+TriggerEvent('gfx-shop:OpenMenu', ...)
+
+```
+
+---
+
+## Exports
+
+```lua
+exports['gfx-shop']:gfx-base(...)
+```
+
+---
+
+## Komutlar
+
+*Komut bulunamadı*
+
 ---
 
 ## Özellikler
 
-- Client-side işlemler
-- Server-side işlemler
+- ✅ Client-side
+- ✅ Server-side
 
 ---
 
-## Notlar
+## Kaynak
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-shop
+- **GitHub:** https://github.com/gfx-fivem/gfx-shop
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)

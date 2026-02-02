@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-help klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-help klasörünü resources/ dizinine kopyalayın
+cp -r gfx-help /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -16,16 +17,45 @@ ensure gfx-help
 
 ## Konfigürasyon
 
+*Konfigürasyon dosyası bulunamadı*
+
+---
+
+## Events
+
+### Client Events
+
+```lua
+-- gfx-help:openMenu
+TriggerEvent('gfx-help:openMenu', ...)
+
+-- gfx-help:updateTicket
+TriggerEvent('gfx-help:updateTicket', ...)
+
+```
+
+---
+
+## Exports
+
+*Export bulunamadı*
+
+---
+
+## Komutlar
+
+*Komut bulunamadı*
+
 ---
 
 ## Özellikler
 
-- Client-side işlemler
-- Server-side işlemler
+- ✅ Client-side
+- ✅ Server-side
 
 ---
 
-## Notlar
+## Kaynak
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-help
+- **GitHub:** https://github.com/gfx-fivem/gfx-help
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)

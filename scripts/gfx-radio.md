@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-radio klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-radio klasörünü resources/ dizinine kopyalayın
+cp -r gfx-radio /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -12,20 +13,63 @@ gfx-radio klasörünü resources/ dizinine kopyalayın
 ensure gfx-radio
 ```
 
+### 3. Bağımlılıklar
+- ox_inventory veya ox_lib (tespit edildi)
+
 ---
 
 ## Konfigürasyon
+
+*Konfigürasyon dosyası bulunamadı*
+
+---
+
+## Events
+
+### Client Events
+
+```lua
+-- onResourceStop
+TriggerEvent('onResourceStop', ...)
+
+```
+
+---
+
+## Exports
+
+```lua
+exports['gfx-radio']:codem-inventory(...)
+exports['gfx-radio']:es_extended(...)
+exports['gfx-radio']:gfx-inventory(...)
+exports['gfx-radio']:ghmattimysql(...)
+exports['gfx-radio']:ox_inventory(...)
+exports['gfx-radio']:oxmysql(...)
+exports['gfx-radio']:ps-inventory(...)
+exports['gfx-radio']:qb-core(...)
+exports['gfx-radio']:qb-inventory(...)
+exports['gfx-radio']:qs-inventory(...)
+```
+
+---
+
+## Komutlar
+
+| Komut | Açıklama |
+|-------|----------|
+| `/gfx-radio` | - |
 
 ---
 
 ## Özellikler
 
-- Client-side işlemler
-- Server-side işlemler
+- ✅ Client-side
+- ✅ Server-side
+- ✅ Shared modül
 
 ---
 
-## Notlar
+## Kaynak
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-radio
+- **GitHub:** https://github.com/gfx-fivem/gfx-radio
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)

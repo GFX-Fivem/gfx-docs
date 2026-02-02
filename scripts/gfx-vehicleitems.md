@@ -3,8 +3,9 @@
 ## Kurulum
 
 ### 1. Dosyaları Kopyala
-```
-gfx-vehicleitems klasörünü resources/ dizinine kopyalayın
+```bash
+# gfx-vehicleitems klasörünü resources/ dizinine kopyalayın
+cp -r gfx-vehicleitems /path/to/resources/
 ```
 
 ### 2. server.cfg
@@ -16,9 +17,34 @@ ensure gfx-vehicleitems
 
 ## Konfigürasyon
 
+*Konfigürasyon dosyası bulunamadı*
+
 ---
 
-## Notlar
+## Events
 
-Detaylı konfigürasyon ve events için kaynak kodunu inceleyiniz:
-- GitHub: https://github.com/gfx-fivem/gfx-vehicleitems
+*Event bulunamadı*
+
+---
+
+## Exports
+
+*Export bulunamadı*
+
+---
+
+## Komutlar
+
+*Komut bulunamadı*
+
+---
+
+## Özellikler
+
+
+---
+
+## Kaynak
+
+- **GitHub:** https://github.com/gfx-fivem/gfx-vehicleitems
+- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
