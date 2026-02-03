@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-truthordare folder to your resources directory
 cp -r gfx-truthordare /path/to/resources/
 ```
 
@@ -21,27 +20,19 @@ ensure gfx-truthordare
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- truthordare:client:message
-TriggerEvent('truthordare:client:message', ...)
-
--- truthordare:client:set
-TriggerEvent('truthordare:client:set', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-truthordare']:es_extended(...)
-exports['gfx-truthordare']:qb-core(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

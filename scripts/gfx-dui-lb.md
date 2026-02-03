@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-dui-lb folder to your resources directory
 cp -r gfx-dui-lb /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-dui-lb /path/to/resources/
 ```cfg
 ensure gfx-dui-lb
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -58,26 +54,19 @@ Config = {
 
 ---
 
-## Events
+## Exports
 
-*No events found*
+Exports that other scripts can call:
+
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-dui-lb']:codem-inventory(...)
-exports['gfx-dui-lb']:es_extended(...)
-exports['gfx-dui-lb']:gfx-inventory(...)
-exports['gfx-dui-lb']:ghmattimysql(...)
-exports['gfx-dui-lb']:ox_inventory(...)
-exports['gfx-dui-lb']:oxmysql(...)
-exports['gfx-dui-lb']:ps-inventory(...)
-exports['gfx-dui-lb']:qb-core(...)
-exports['gfx-dui-lb']:qb-inventory(...)
-exports['gfx-dui-lb']:qs-inventory(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

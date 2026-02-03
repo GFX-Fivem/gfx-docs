@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-giveaway folder to your resources directory
 cp -r gfx-giveaway /path/to/resources/
 ```
 
@@ -21,53 +20,19 @@ ensure gfx-giveaway
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- aty_giveaway:client:finished
-TriggerEvent('aty_giveaway:client:finished', ...)
-
--- aty_giveaway:client:notify
-TriggerEvent('aty_giveaway:client:notify', ...)
-
--- aty_giveaway:client:open
-TriggerEvent('aty_giveaway:client:open', ...)
-
--- aty_giveaway:client:refreshPlayers
-TriggerEvent('aty_giveaway:client:refreshPlayers', ...)
-
--- aty_giveaway:client:startGiveaway
-TriggerEvent('aty_giveaway:client:startGiveaway', ...)
-
--- aty_giveaway:client:updateTime
-TriggerEvent('aty_giveaway:client:updateTime', ...)
-
-```
-
-### Server Events
-
-```lua
--- aty_giveaway:server:joinGiveaway
-TriggerServerEvent('aty_giveaway:server:joinGiveaway', ...)
-
--- aty_giveaway:server:startGiveaway
-TriggerServerEvent('aty_giveaway:server:startGiveaway', ...)
-
--- esx:playerLoaded
-TriggerServerEvent('esx:playerLoaded', ...)
-
--- QBCore:Server:OnPlayerLoaded
-TriggerServerEvent('QBCore:Server:OnPlayerLoaded', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-*No exports found*
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

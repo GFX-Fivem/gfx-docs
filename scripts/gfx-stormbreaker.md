@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-stormbreaker folder to your resources directory
 cp -r gfx-stormbreaker /path/to/resources/
 ```
 
@@ -21,15 +20,19 @@ ensure gfx-stormbreaker
 
 ---
 
-## Events
+## Exports
 
-*No events found*
+Exports that other scripts can call:
+
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-*No exports found*
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

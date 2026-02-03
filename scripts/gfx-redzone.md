@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-redzone folder to your resources directory
 cp -r gfx-redzone /path/to/resources/
 ```
 
@@ -21,33 +20,49 @@ ensure gfx-redzone
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
 ```lua
--- gfx-redzone:CreateZone
-TriggerEvent('gfx-redzone:CreateZone', ...)
-
--- gfx-redzone:Identifier
-TriggerEvent('gfx-redzone:Identifier', ...)
-
--- gfx-redzone:RemoveZone
-TriggerEvent('gfx-redzone:RemoveZone', ...)
-
--- gfx-redzone:UpdateZones
-TriggerEvent('gfx-redzone:UpdateZones', ...)
+-- Export: IsPlayerInRedZone
+local result = exports['gfx-redzone']:IsPlayerInRedZone()
 
 ```
 
 ---
 
-## Exports
+## Events
+
+Events that this script triggers (you can listen to these):
+
+### Server Events
 
 ```lua
-exports['gfx-redzone']:gfx-inventory(...)
-exports['gfx-redzone']:gfx-lib(...)
-exports['gfx-redzone']:gfx-points(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-redzone:enteredZone')
+AddEventHandler('gfx-redzone:enteredZone', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-redzone:exitedZone')
+AddEventHandler('gfx-redzone:exitedZone', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-redzone:playerKilled')
+AddEventHandler('gfx-redzone:playerKilled', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-redzone:server:Identifier')
+AddEventHandler('gfx-redzone:server:Identifier', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---

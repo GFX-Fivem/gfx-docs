@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-lumberjack folder to your resources directory
 cp -r gfx-lumberjack /path/to/resources/
 ```
 
@@ -21,43 +20,19 @@ ensure gfx-lumberjack
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gfx:client:lumberjack:Notify
-TriggerEvent('gfx:client:lumberjack:Notify', ...)
-
--- gfx:client:LumberjackNui
-TriggerEvent('gfx:client:LumberjackNui', ...)
-
--- gfx:lumberjack:cutTree
-TriggerEvent('gfx:lumberjack:cutTree', ...)
-
-```
-
-### Server Events
-
-```lua
--- gfx:server:lumberjack:CuttingTrees
-TriggerServerEvent('gfx:server:lumberjack:CuttingTrees', ...)
-
--- gfx:server:lumberjack:GainContractMoney
-TriggerServerEvent('gfx:server:lumberjack:GainContractMoney', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-lumberjack']:es_extended(...)
-exports['gfx-lumberjack']:ghmattimysql(...)
-exports['gfx-lumberjack']:oxmysql(...)
-exports['gfx-lumberjack']:qb-core(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

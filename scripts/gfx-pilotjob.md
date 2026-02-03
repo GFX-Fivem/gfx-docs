@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-pilotjob folder to your resources directory
 cp -r gfx-pilotjob /path/to/resources/
 ```
 
@@ -21,26 +20,44 @@ ensure gfx-pilotjob
 
 ---
 
+## Exports
+
+Exports that other scripts can call:
+
+*No exports found*
+
+---
+
 ## Events
+
+Events that this script triggers (you can listen to these):
 
 ### Client Events
 
 ```lua
--- gfx-pilotjob:client:CallCops
-TriggerEvent('gfx-pilotjob:client:CallCops', ...)
-
--- missionFailed
-TriggerEvent('missionFailed', ...)
+-- Listen to this event
+RegisterNetEvent('gfx-pilotjob:deleteVehicle')
+AddEventHandler('gfx-pilotjob:deleteVehicle', function(...)
+    -- Handle event
+end)
 
 ```
 
----
-
-## Exports
+### Server Events
 
 ```lua
-exports['gfx-pilotjob']:es_extended(...)
-exports['gfx-pilotjob']:qb-core(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-pilotjob:explodePlane')
+AddEventHandler('gfx-pilotjob:explodePlane', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-pilotjob:server:CallCops')
+AddEventHandler('gfx-pilotjob:server:CallCops', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---
@@ -53,10 +70,12 @@ exports['gfx-pilotjob']:qb-core(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- gfx:server:getInfos
-TriggerCallback('gfx:server:getInfos', function(result)
-    -- handle result
+-- Callback: gfx:server:getInfos", function(source
+TriggerCallback('gfx:server:getInfos", function(source', function(result)
+    -- Handle result
 end)
 
 ```

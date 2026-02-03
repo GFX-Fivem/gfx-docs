@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-autopilot folder to your resources directory
 cp -r gfx-autopilot /path/to/resources/
 ```
 
@@ -21,18 +20,19 @@ ensure gfx-autopilot
 
 ---
 
-## Events
+## Exports
 
-*No events found*
+Exports that other scripts can call:
+
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-autopilot']:es_extended(...)
-exports['gfx-autopilot']:qb-core(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-racing folder to your resources directory
 cp -r gfx-racing /path/to/resources/
 ```
 
@@ -21,71 +20,93 @@ ensure gfx-racing
 
 ---
 
+## Exports
+
+Exports that other scripts can call:
+
+*No exports found*
+
+---
+
 ## Events
 
-### Client Events
-
-```lua
--- applytest
-TriggerEvent('applytest', ...)
-
--- gfx-racing-client:CreateRace
-TriggerEvent('gfx-racing-client:CreateRace', ...)
-
--- gfx-racing-client:RefreshActiveRaces
-TriggerEvent('gfx-racing-client:RefreshActiveRaces', ...)
-
--- gfx-racing:Client:FinishRace
-TriggerEvent('gfx-racing:Client:FinishRace', ...)
-
--- gfx-racing:NewRaceNotf
-TriggerEvent('gfx-racing:NewRaceNotf', ...)
-
--- gfx-racing:notify
-TriggerEvent('gfx-racing:notify', ...)
-
--- gfx-racing:RemoveRacing
-TriggerEvent('gfx-racing:RemoveRacing', ...)
-
--- gfx-racing:SetMarker
-TriggerEvent('gfx-racing:SetMarker', ...)
-
--- gfx-racing:SetRaceLeaderBoard
-TriggerEvent('gfx-racing:SetRaceLeaderBoard', ...)
-
--- gfx-racing:StartRace
-TriggerEvent('gfx-racing:StartRace', ...)
-
--- gfx-racing:StartRaceN
-TriggerEvent('gfx-racing:StartRaceN', ...)
-
--- gfx-racing:updatenui
-TriggerEvent('gfx-racing:updatenui', ...)
-
--- gfx-racing:UpdateRacers
-TriggerEvent('gfx-racing:UpdateRacers', ...)
-
-```
+Events that this script triggers (you can listen to these):
 
 ### Server Events
 
 ```lua
--- gfx-racing:StartServerRace
-TriggerServerEvent('gfx-racing:StartServerRace', ...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing-FinishRace')
+AddEventHandler('gfx-racing-FinishRace', function(...)
+    -- Handle event
+end)
 
-```
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing-server:AddRoute')
+AddEventHandler('gfx-racing-server:AddRoute', function(...)
+    -- Handle event
+end)
 
----
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing-server:CreateRace')
+AddEventHandler('gfx-racing-server:CreateRace', function(...)
+    -- Handle event
+end)
 
-## Exports
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing-server:JoinRace')
+AddEventHandler('gfx-racing-server:JoinRace', function(...)
+    -- Handle event
+end)
 
-```lua
-exports['gfx-racing']:es_extended(...)
-exports['gfx-racing']:gfx-lib(...)
-exports['gfx-racing']:ghmattimysql(...)
-exports['gfx-racing']:mysql-async(...)
-exports['gfx-racing']:oxmysql(...)
-exports['gfx-racing']:qb-core(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing-server:leaverace')
+AddEventHandler('gfx-racing-server:leaverace', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing-ServerOpenNUI')
+AddEventHandler('gfx-racing-ServerOpenNUI', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing-SetRaceLeaderBoard')
+AddEventHandler('gfx-racing-SetRaceLeaderBoard', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing:ClearRaceData')
+AddEventHandler('gfx-racing:ClearRaceData', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing:Server:DeleteRoute')
+AddEventHandler('gfx-racing:Server:DeleteRoute', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing:SetFavCar')
+AddEventHandler('gfx-racing:SetFavCar', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing:setInterval')
+AddEventHandler('gfx-racing:setInterval', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-racing:StartServerRace')
+AddEventHandler('gfx-racing:StartServerRace', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---

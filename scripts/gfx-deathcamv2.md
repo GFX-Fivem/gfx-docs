@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-deathcamv2 folder to your resources directory
 cp -r gfx-deathcamv2 /path/to/resources/
 ```
 
@@ -21,21 +20,19 @@ ensure gfx-deathcamv2
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gameEventTriggered
-TriggerEvent('gameEventTriggered', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-*No exports found*
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -47,10 +44,12 @@ TriggerEvent('gameEventTriggered', ...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- getPlayerPP
-TriggerCallback('getPlayerPP', function(result)
-    -- handle result
+-- Callback: getPlayerPP", function(source, id
+TriggerCallback('getPlayerPP", function(source, id', function(result)
+    -- Handle result
 end)
 
 ```

@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-lowrider folder to your resources directory
 cp -r gfx-lowrider /path/to/resources/
 ```
 
@@ -21,15 +20,40 @@ ensure gfx-lowrider
 
 ---
 
-## Events
+## Exports
 
-*No events found*
+Exports that other scripts can call:
+
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-*No exports found*
+Events that this script triggers (you can listen to these):
+
+### Server Events
+
+```lua
+-- Listen to this event on server
+RegisterNetEvent('gfx-lowrider:UpdatePoints')
+AddEventHandler('gfx-lowrider:UpdatePoints', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-lowriders:JoinDuel')
+AddEventHandler('gfx-lowriders:JoinDuel', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-lowriders:LeaveDuel')
+AddEventHandler('gfx-lowriders:LeaveDuel', function(...)
+    -- Handle event
+end)
+
+```
 
 ---
 

@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-deathlog folder to your resources directory
 cp -r gfx-deathlog /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-deathlog /path/to/resources/
 ```cfg
 ensure gfx-deathlog
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -24,43 +20,19 @@ ensure gfx-deathlog
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- rush-deadlog:client:Report
-TriggerEvent('rush-deadlog:client:Report', ...)
-
--- rush-deadlog:client:UpdateDeadLogs
-TriggerEvent('rush-deadlog:client:UpdateDeadLogs', ...)
-
-```
-
-### Server Events
-
-```lua
--- rush-deadlog:server:ReportDeadLog
-TriggerServerEvent('rush-deadlog:server:ReportDeadLog', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-deathlog']:codem-inventory(...)
-exports['gfx-deathlog']:es_extended(...)
-exports['gfx-deathlog']:gfx-inventory(...)
-exports['gfx-deathlog']:ghmattimysql(...)
-exports['gfx-deathlog']:ox_inventory(...)
-exports['gfx-deathlog']:oxmysql(...)
-exports['gfx-deathlog']:ps-inventory(...)
-exports['gfx-deathlog']:qb-core(...)
-exports['gfx-deathlog']:qb-inventory(...)
-exports['gfx-deathlog']:qs-inventory(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -77,10 +49,12 @@ exports['gfx-deathlog']:qs-inventory(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- getIdent
-TriggerCallback('getIdent', function(result)
-    -- handle result
+-- Callback: getIdent', function(source, targetId
+TriggerCallback('getIdent', function(source, targetId', function(result)
+    -- Handle result
 end)
 
 ```

@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-banking folder to your resources directory
 cp -r gfx-banking /path/to/resources/
 ```
 
@@ -21,33 +20,57 @@ ensure gfx-banking
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gfx-banking:client:Update
-TriggerEvent('gfx-banking:client:Update', ...)
-
--- gfx-banking:Open
-TriggerEvent('gfx-banking:Open', ...)
-
--- qb-core:UpdateAccounts
-TriggerEvent('qb-core:UpdateAccounts', ...)
-
--- QBCore:Player:SetPlayerData
-TriggerEvent('QBCore:Player:SetPlayerData', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
+
+Events that this script triggers (you can listen to these):
+
+### Server Events
 
 ```lua
-exports['gfx-banking']:gfx-base(...)
-exports['gfx-banking']:qb-core(...)
-exports['gfx-banking']:qb-target(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-banking:CreateNewAccount')
+AddEventHandler('gfx-banking:CreateNewAccount', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-banking:Deposit')
+AddEventHandler('gfx-banking:Deposit', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-banking:SwitchAccount')
+AddEventHandler('gfx-banking:SwitchAccount', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-banking:Transfer')
+AddEventHandler('gfx-banking:Transfer', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-banking:transferSearch')
+AddEventHandler('gfx-banking:transferSearch', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-banking:Withdraw')
+AddEventHandler('gfx-banking:Withdraw', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---

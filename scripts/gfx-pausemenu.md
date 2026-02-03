@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-pausemenu folder to your resources directory
 cp -r gfx-pausemenu /path/to/resources/
 ```
 
@@ -21,21 +20,19 @@ ensure gfx-pausemenu
 
 ---
 
-## Events
+## Exports
 
-*No events found*
+Exports that other scripts can call:
+
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-pausemenu']:es_extended(...)
-exports['gfx-pausemenu']:ghmattimysql(...)
-exports['gfx-pausemenu']:np-ui(...)
-exports['gfx-pausemenu']:oxmysql(...)
-exports['gfx-pausemenu']:qb-core(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -47,10 +44,12 @@ exports['gfx-pausemenu']:qb-core(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- getInfo
-TriggerCallback('getInfo', function(result)
-    -- handle result
+-- Callback: getInfo", function(source, isFirst
+TriggerCallback('getInfo", function(source, isFirst', function(result)
+    -- Handle result
 end)
 
 ```

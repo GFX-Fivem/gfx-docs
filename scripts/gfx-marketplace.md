@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-marketplace folder to your resources directory
 cp -r gfx-marketplace /path/to/resources/
 ```
 
@@ -21,28 +20,19 @@ ensure gfx-marketplace
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gfx-marketplace:notify
-TriggerEvent('gfx-marketplace:notify', ...)
-
--- gfx-marketplace:openUI
-TriggerEvent('gfx-marketplace:openUI', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-marketplace']:ghmattimysql(...)
-exports['gfx-marketplace']:oxmysql(...)
-exports['gfx-marketplace']:qb-core(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -54,40 +44,42 @@ exports['gfx-marketplace']:qb-core(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- gfx-marketplace:buyItem
-TriggerCallback('gfx-marketplace:buyItem', function(result)
-    -- handle result
+-- Callback: gfx-marketplace:fetchItems", function(source, itemName
+TriggerCallback('gfx-marketplace:fetchItems", function(source, itemName', function(result)
+    -- Handle result
 end)
 
--- gfx-marketplace:claim
-TriggerCallback('gfx-marketplace:claim', function(result)
-    -- handle result
+-- Callback: gfx-marketplace:getCreateOfferPage", function(source, itemName
+TriggerCallback('gfx-marketplace:getCreateOfferPage", function(source, itemName', function(result)
+    -- Handle result
 end)
 
--- gfx-marketplace:createOffer
-TriggerCallback('gfx-marketplace:createOffer', function(result)
-    -- handle result
+-- Callback: gfx-marketplace:getMyOffers", function(source, itemName
+TriggerCallback('gfx-marketplace:getMyOffers", function(source, itemName', function(result)
+    -- Handle result
 end)
 
--- gfx-marketplace:deleteOffer
-TriggerCallback('gfx-marketplace:deleteOffer', function(result)
-    -- handle result
+-- Callback: gfx-marketplace:deleteOffer", function(source, data
+TriggerCallback('gfx-marketplace:deleteOffer", function(source, data', function(result)
+    -- Handle result
 end)
 
--- gfx-marketplace:fetchItems
-TriggerCallback('gfx-marketplace:fetchItems', function(result)
-    -- handle result
+-- Callback: gfx-marketplace:createOffer", function(source, data
+TriggerCallback('gfx-marketplace:createOffer", function(source, data', function(result)
+    -- Handle result
 end)
 
--- gfx-marketplace:getCreateOfferPage
-TriggerCallback('gfx-marketplace:getCreateOfferPage', function(result)
-    -- handle result
+-- Callback: gfx-marketplace:buyItem", function(source, data
+TriggerCallback('gfx-marketplace:buyItem", function(source, data', function(result)
+    -- Handle result
 end)
 
--- gfx-marketplace:getMyOffers
-TriggerCallback('gfx-marketplace:getMyOffers', function(result)
-    -- handle result
+-- Callback: gfx-marketplace:claim", function(source,data
+TriggerCallback('gfx-marketplace:claim", function(source,data', function(result)
+    -- Handle result
 end)
 
 ```

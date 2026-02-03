@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-crew folder to your resources directory
 cp -r gfx-crew /path/to/resources/
 ```
 
@@ -21,59 +20,49 @@ ensure gfx-crew
 
 ---
 
-## Events
+## Exports
 
-### Client Events
-
-```lua
--- gameEventTriggered
-TriggerEvent('gameEventTriggered', ...)
-
--- gfx-crew:AddRelationShip
-TriggerEvent('gfx-crew:AddRelationShip', ...)
-
--- gfx-crew:fetchProfileData
-TriggerEvent('gfx-crew:fetchProfileData', ...)
-
--- gfx-crew:hasCrew
-TriggerEvent('gfx-crew:hasCrew', ...)
-
--- gfx-crew:receiveAnnouncement
-TriggerEvent('gfx-crew:receiveAnnouncement', ...)
-
--- gfx-crew:receiveMessage
-TriggerEvent('gfx-crew:receiveMessage', ...)
-
--- gfx-crew:RemoveRelationShip
-TriggerEvent('gfx-crew:RemoveRelationShip', ...)
-
--- gfx-crew:UpdateMembers
-TriggerEvent('gfx-crew:UpdateMembers', ...)
-
--- gfx-crew:UpdateStats
-TriggerEvent('gfx-crew:UpdateStats', ...)
-
--- gfx-deleteCrewBackUp
-TriggerEvent('gfx-deleteCrewBackUp', ...)
-
-```
-
-### Server Events
+Exports that other scripts can call:
 
 ```lua
--- gfx-crew:playerKilled
-TriggerServerEvent('gfx-crew:playerKilled', ...)
+-- Export: AddBadgeToMember
+local result = exports['gfx-crew']:AddBadgeToMember(player, badge)
+
+-- Export: GetPlayerCrewData
+local result = exports['gfx-crew']:GetPlayerCrewData()
+
+-- Export: GetPlayerCrewData
+local result = exports['gfx-crew']:GetPlayerCrewData(source)
+
+-- Export: GetPlayerCrewMembers
+local result = exports['gfx-crew']:GetPlayerCrewMembers(source)
+
+-- Export: GetPlayerCrewMembersForMarker
+local result = exports['gfx-crew']:GetPlayerCrewMembersForMarker(source)
+
+-- Export: GetPlayerCrewName
+local result = exports['gfx-crew']:GetPlayerCrewName(source)
+
+-- Export: IsMenuVisible
+local result = exports['gfx-crew']:IsMenuVisible()
 
 ```
 
 ---
 
-## Exports
+## Events
+
+Events that this script triggers (you can listen to these):
+
+### Server Events
 
 ```lua
-exports['gfx-crew']:gfx-lib(...)
-exports['gfx-crew']:ghmattimysql(...)
-exports['gfx-crew']:oxmysql(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-crew:playerKilled')
+AddEventHandler('gfx-crew:playerKilled', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---
@@ -86,165 +75,167 @@ exports['gfx-crew']:oxmysql(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- gfx-crew:addRank
-TriggerCallback('gfx-crew:addRank', function(result)
-    -- handle result
+-- Callback: gfx-crew:hasCrew', function(source
+TriggerCallback('gfx-crew:hasCrew', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:createCrew
-TriggerCallback('gfx-crew:createCrew', function(result)
-    -- handle result
+-- Callback: gfx-crew:createCrew", function(source, data
+TriggerCallback('gfx-crew:createCrew", function(source, data', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:deleteCrew
-TriggerCallback('gfx-crew:deleteCrew', function(result)
-    -- handle result
+-- Callback: gfx-crew:getPublicCrews", function(source
+TriggerCallback('gfx-crew:getPublicCrews", function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:deleteRank
-TriggerCallback('gfx-crew:deleteRank', function(result)
-    -- handle result
+-- Callback: gfx-crew:fetchProfileData', function(source
+TriggerCallback('gfx-crew:fetchProfileData', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:fetchProfileData
-TriggerCallback('gfx-crew:fetchProfileData', function(result)
-    -- handle result
+-- Callback: gfx-crew:getBadgeCount', function(source
+TriggerCallback('gfx-crew:getBadgeCount', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getActiveMemberData
-TriggerCallback('gfx-crew:getActiveMemberData', function(result)
-    -- handle result
+-- Callback: gfx-crew:getCrewStats', function(source
+TriggerCallback('gfx-crew:getCrewStats', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getAnnouncements
-TriggerCallback('gfx-crew:getAnnouncements', function(result)
-    -- handle result
+-- Callback: gfx-crew:getMessages', function(source
+TriggerCallback('gfx-crew:getMessages', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getBadgeCount
-TriggerCallback('gfx-crew:getBadgeCount', function(result)
-    -- handle result
+-- Callback: gfx-crew:getMembers', function(source
+TriggerCallback('gfx-crew:getMembers', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getCrewInvites
-TriggerCallback('gfx-crew:getCrewInvites', function(result)
-    -- handle result
+-- Callback: gfx-crew:getLeaderboardData', function(source, isCrew
+TriggerCallback('gfx-crew:getLeaderboardData', function(source, isCrew', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getCrewStats
-TriggerCallback('gfx-crew:getCrewStats', function(result)
-    -- handle result
+-- Callback: gfx-crew:getMemberCoords', function(source, member
+TriggerCallback('gfx-crew:getMemberCoords', function(source, member', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getFirstCrewAndMember
-TriggerCallback('gfx-crew:getFirstCrewAndMember', function(result)
-    -- handle result
+-- Callback: gfx-crew:getFirstCrewAndMember', function(
+TriggerCallback('gfx-crew:getFirstCrewAndMember', function(', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getLeaderboardData
-TriggerCallback('gfx-crew:getLeaderboardData', function(result)
-    -- handle result
+-- Callback: gfx-crew:getSettings', function(source
+TriggerCallback('gfx-crew:getSettings', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getMemberCoords
-TriggerCallback('gfx-crew:getMemberCoords', function(result)
-    -- handle result
+-- Callback: gfx-crew:getRoles', function(source
+TriggerCallback('gfx-crew:getRoles', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getMembers
-TriggerCallback('gfx-crew:getMembers', function(result)
-    -- handle result
+-- Callback: gfx-crew:deleteRank', function(source, id
+TriggerCallback('gfx-crew:deleteRank', function(source, id', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getMembersForLoop
-TriggerCallback('gfx-crew:getMembersForLoop', function(result)
-    -- handle result
+-- Callback: gfx-crew:getMembersWithPrevCrew', function(source, id
+TriggerCallback('gfx-crew:getMembersWithPrevCrew', function(source, id', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getMembersWithPrevCrew
-TriggerCallback('gfx-crew:getMembersWithPrevCrew', function(result)
-    -- handle result
+-- Callback: gfx-crew:getAnnouncements', function(source
+TriggerCallback('gfx-crew:getAnnouncements', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getMessages
-TriggerCallback('gfx-crew:getMessages', function(result)
-    -- handle result
+-- Callback: gfx-crew:getActiveMemberData', function(source, id
+TriggerCallback('gfx-crew:getActiveMemberData', function(source, id', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getPlayers
-TriggerCallback('gfx-crew:getPlayers', function(result)
-    -- handle result
+-- Callback: gfx-crew:sendAnnouncement', function(source, message
+TriggerCallback('gfx-crew:sendAnnouncement', function(source, message', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getPublicCrews
-TriggerCallback('gfx-crew:getPublicCrews', function(result)
-    -- handle result
+-- Callback: gfx-crew:savePerms', function(source, permissions, roleId
+TriggerCallback('gfx-crew:savePerms', function(source, permissions, roleId', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getRoles
-TriggerCallback('gfx-crew:getRoles', function(result)
-    -- handle result
+-- Callback: gfx-crew:addRank', function(source, data
+TriggerCallback('gfx-crew:addRank', function(source, data', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getSettings
-TriggerCallback('gfx-crew:getSettings', function(result)
-    -- handle result
+-- Callback: gfx-crew:sendMessage', function(source, message
+TriggerCallback('gfx-crew:sendMessage', function(source, message', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:hasCrew
-TriggerCallback('gfx-crew:hasCrew', function(result)
-    -- handle result
+-- Callback: gfx-crew:setStatus', function(source
+TriggerCallback('gfx-crew:setStatus', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:joinCrew
-TriggerCallback('gfx-crew:joinCrew', function(result)
-    -- handle result
+-- Callback: gfx-crew:joinCrew', function(source, crewId, isInvite
+TriggerCallback('gfx-crew:joinCrew', function(source, crewId, isInvite', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:kickMember
-TriggerCallback('gfx-crew:kickMember', function(result)
-    -- handle result
+-- Callback: gfx-crew:getPlayers', function(source
+TriggerCallback('gfx-crew:getPlayers', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:leaveCrew
-TriggerCallback('gfx-crew:leaveCrew', function(result)
-    -- handle result
+-- Callback: gfx-crew:sendInvite', function(source, inviteList
+TriggerCallback('gfx-crew:sendInvite', function(source, inviteList', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:savePerms
-TriggerCallback('gfx-crew:savePerms', function(result)
-    -- handle result
+-- Callback: gfx-crew:getCrewInvites', function(source
+TriggerCallback('gfx-crew:getCrewInvites', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:saveSettings
-TriggerCallback('gfx-crew:saveSettings', function(result)
-    -- handle result
+-- Callback: gfx-crew:saveSettings', function(source, settings
+TriggerCallback('gfx-crew:saveSettings', function(source, settings', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:sendAnnouncement
-TriggerCallback('gfx-crew:sendAnnouncement', function(result)
-    -- handle result
+-- Callback: gfx-crew:leaveCrew', function(source
+TriggerCallback('gfx-crew:leaveCrew', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:sendInvite
-TriggerCallback('gfx-crew:sendInvite', function(result)
-    -- handle result
+-- Callback: gfx-crew:kickMember', function(source, id
+TriggerCallback('gfx-crew:kickMember', function(source, id', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:sendMessage
-TriggerCallback('gfx-crew:sendMessage', function(result)
-    -- handle result
+-- Callback: gfx-crew:deleteCrew', function(source
+TriggerCallback('gfx-crew:deleteCrew', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:setRole
-TriggerCallback('gfx-crew:setRole', function(result)
-    -- handle result
+-- Callback: gfx-crew:getMembersForLoop', function(source
+TriggerCallback('gfx-crew:getMembersForLoop', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:setStatus
-TriggerCallback('gfx-crew:setStatus', function(result)
-    -- handle result
+-- Callback: gfx-crew:setRole', function(source, id, role
+TriggerCallback('gfx-crew:setRole', function(source, id, role', function(result)
+    -- Handle result
 end)
 
 ```

@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-help folder to your resources directory
 cp -r gfx-help /path/to/resources/
 ```
 
@@ -21,24 +20,34 @@ ensure gfx-help
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gfx-help:openMenu
-TriggerEvent('gfx-help:openMenu', ...)
-
--- gfx-help:updateTicket
-TriggerEvent('gfx-help:updateTicket', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-*No exports found*
+Events that this script triggers (you can listen to these):
+
+### Server Events
+
+```lua
+-- Listen to this event on server
+RegisterNetEvent('gfx-help:closeTicket')
+AddEventHandler('gfx-help:closeTicket', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-help:updateTicket')
+AddEventHandler('gfx-help:updateTicket', function(...)
+    -- Handle event
+end)
+
+```
 
 ---
 

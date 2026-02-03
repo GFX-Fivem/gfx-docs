@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-dailygift folder to your resources directory
 cp -r gfx-dailygift /path/to/resources/
 ```
 
@@ -21,38 +20,39 @@ ensure gfx-dailygift
 
 ---
 
+## Exports
+
+Exports that other scripts can call:
+
+*No exports found*
+
+---
+
 ## Events
 
-### Client Events
-
-```lua
--- gfx-daily:open
-TriggerEvent('gfx-daily:open', ...)
-
--- gfx-dailygift:setItemTable
-TriggerEvent('gfx-dailygift:setItemTable', ...)
-
--- gfx-dailygift:UpdateUI
-TriggerEvent('gfx-dailygift:UpdateUI', ...)
-
-```
+Events that this script triggers (you can listen to these):
 
 ### Server Events
 
 ```lua
--- gfx-dailygift:open
-TriggerServerEvent('gfx-dailygift:open', ...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-dailygift:getItemTable')
+AddEventHandler('gfx-dailygift:getItemTable', function(...)
+    -- Handle event
+end)
 
-```
+-- Listen to this event on server
+RegisterNetEvent('gfx-dailygift:GetReward')
+AddEventHandler('gfx-dailygift:GetReward', function(...)
+    -- Handle event
+end)
 
----
+-- Listen to this event on server
+RegisterNetEvent('gfx-dailygift:open')
+AddEventHandler('gfx-dailygift:open', function(...)
+    -- Handle event
+end)
 
-## Exports
-
-```lua
-exports['gfx-dailygift']:gfx-base(...)
-exports['gfx-dailygift']:ghmattimysq(...)
-exports['gfx-dailygift']:ghmattimysql(...)
 ```
 
 ---

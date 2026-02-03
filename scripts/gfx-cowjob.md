@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-cowjob folder to your resources directory
 cp -r gfx-cowjob /path/to/resources/
 ```
 
@@ -21,18 +20,19 @@ ensure gfx-cowjob
 
 ---
 
-## Events
+## Exports
 
-*No events found*
+Exports that other scripts can call:
+
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-cowjob']:es_extended(...)
-exports['gfx-cowjob']:qb-core(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

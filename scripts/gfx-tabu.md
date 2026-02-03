@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-tabu folder to your resources directory
 cp -r gfx-tabu /path/to/resources/
 ```
 
@@ -21,42 +20,58 @@ ensure gfx-tabu
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
 ```lua
--- gfx-tabu:gameFinished
-TriggerEvent('gfx-tabu:gameFinished', ...)
+-- Export: GetConfig
+local result = exports['gfx-tabu']:GetConfig()
 
--- gfx-tabu:newWord
-TriggerEvent('gfx-tabu:newWord', ...)
-
--- gfx-tabu:pass
-TriggerEvent('gfx-tabu:pass', ...)
-
--- gfx-tabu:standBy
-TriggerEvent('gfx-tabu:standBy', ...)
-
--- gfx-tabu:startGame
-TriggerEvent('gfx-tabu:startGame', ...)
-
--- gfx-tabu:updateNarrating
-TriggerEvent('gfx-tabu:updateNarrating', ...)
-
--- gfx-tabu:updateTeam
-TriggerEvent('gfx-tabu:updateTeam', ...)
+-- Export: GetIdentifier
+local result = exports['gfx-tabu']:GetIdentifier(source, type)
 
 ```
 
 ---
 
-## Exports
+## Events
+
+Events that this script triggers (you can listen to these):
+
+### Server Events
 
 ```lua
-exports['gfx-tabu']:es_extended(...)
-exports['gfx-tabu']:qb-core(...)
-exports['gfx-tabu']:qb-inventory(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-tabu:button')
+AddEventHandler('gfx-tabu:button', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-tabu:JoinLobby')
+AddEventHandler('gfx-tabu:JoinLobby', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-tabu:quitLobby')
+AddEventHandler('gfx-tabu:quitLobby', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-tabu:RegisterLobby')
+AddEventHandler('gfx-tabu:RegisterLobby', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-tabu:switchTeam')
+AddEventHandler('gfx-tabu:switchTeam', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---

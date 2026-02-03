@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-christmastruck folder to your resources directory
 cp -r gfx-christmastruck /path/to/resources/
 ```
 
@@ -21,33 +20,19 @@ ensure gfx-christmastruck
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gfx-christmasgifts:client:addBlipToTruck
-TriggerEvent('gfx-christmasgifts:client:addBlipToTruck', ...)
-
--- gfx-christmasgifts:client:createGift
-TriggerEvent('gfx-christmasgifts:client:createGift', ...)
-
--- gfx-christmasgifts:client:pickupGift
-TriggerEvent('gfx-christmasgifts:client:pickupGift', ...)
-
--- gfx-christmasgifts:client:spawnGiftTruck
-TriggerEvent('gfx-christmasgifts:client:spawnGiftTruck', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-christmastruck']:es_extended(...)
-exports['gfx-christmastruck']:qb-core(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

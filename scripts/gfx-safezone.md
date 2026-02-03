@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-safezone folder to your resources directory
 cp -r gfx-safezone /path/to/resources/
 ```
 
@@ -21,21 +20,29 @@ ensure gfx-safezone
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
 ```lua
--- gfx-zone:ForceExit
-TriggerEvent('gfx-zone:ForceExit', ...)
+-- Export: GetPlayersInZone
+local result = exports['gfx-safezone']:GetPlayersInZone(zone)
+
+-- Export: GetPlayerZone
+local result = exports['gfx-safezone']:GetPlayerZone(player)
+
+-- Export: InSafeZone
+local result = exports['gfx-safezone']:InSafeZone(player)
 
 ```
 
 ---
 
-## Exports
+## Events
 
-*No exports found*
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

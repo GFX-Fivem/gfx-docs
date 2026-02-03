@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-hacker folder to your resources directory
 cp -r gfx-hacker /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-hacker /path/to/resources/
 ```cfg
 ensure gfx-hacker
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -58,26 +54,19 @@ Config = {
 
 ---
 
-## Events
+## Exports
 
-*No events found*
+Exports that other scripts can call:
+
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-hacker']:codem-inventory(...)
-exports['gfx-hacker']:es_extended(...)
-exports['gfx-hacker']:gfx-inventory(...)
-exports['gfx-hacker']:ghmattimysql(...)
-exports['gfx-hacker']:ox_inventory(...)
-exports['gfx-hacker']:oxmysql(...)
-exports['gfx-hacker']:ps-inventory(...)
-exports['gfx-hacker']:qb-core(...)
-exports['gfx-hacker']:qb-inventory(...)
-exports['gfx-hacker']:qs-inventory(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

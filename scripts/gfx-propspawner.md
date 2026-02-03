@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-propspawner folder to your resources directory
 cp -r gfx-propspawner /path/to/resources/
 ```
 
@@ -21,24 +20,19 @@ ensure gfx-propspawner
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gfx-object:StartObjectPlacementLoop
-TriggerEvent('gfx-object:StartObjectPlacementLoop', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-propspawner']:es_extended(...)
-exports['gfx-propspawner']:qb-core(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

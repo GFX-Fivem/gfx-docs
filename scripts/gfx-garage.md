@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-garage folder to your resources directory
 cp -r gfx-garage /path/to/resources/
 ```
 
@@ -21,31 +20,33 @@ ensure gfx-garage
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- esx:setJob
-TriggerEvent('esx:setJob', ...)
-
--- gfx-garage:client:openGarage
-TriggerEvent('gfx-garage:client:openGarage', ...)
-
--- QBCore:Player:SetPlayerData
-TriggerEvent('QBCore:Player:SetPlayerData', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
+
+Events that this script triggers (you can listen to these):
+
+### Server Events
 
 ```lua
-exports['gfx-garage']:es_extended(...)
-exports['gfx-garage']:gfx-base(...)
-exports['gfx-garage']:qb-core(...)
-exports['gfx-garage']:qb-target(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-garage:server:SpawnVehicle')
+AddEventHandler('gfx-garage:server:SpawnVehicle', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-garage:takeOutVehicle')
+AddEventHandler('gfx-garage:takeOutVehicle', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---

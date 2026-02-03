@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-vote folder to your resources directory
 cp -r gfx-vote /path/to/resources/
 ```
 
@@ -21,32 +20,33 @@ ensure gfx-vote
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gfx-vote:create
-TriggerEvent('gfx-vote:create', ...)
-
--- gfx-vote:createMenu
-TriggerEvent('gfx-vote:createMenu', ...)
-
--- gfx-vote:reset
-TriggerEvent('gfx-vote:reset', ...)
-
--- gfx-vote:vote
-TriggerEvent('gfx-vote:vote', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
+
+Events that this script triggers (you can listen to these):
+
+### Server Events
 
 ```lua
-exports['gfx-vote']:es_extended(...)
-exports['gfx-vote']:qb-core(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-vote:create')
+AddEventHandler('gfx-vote:create', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-vote:vote')
+AddEventHandler('gfx-vote:vote', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---

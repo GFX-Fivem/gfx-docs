@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-gps folder to your resources directory
 cp -r gfx-gps /path/to/resources/
 ```
 
@@ -21,59 +20,19 @@ ensure gfx-gps
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- aty_gps:client:disableGps
-TriggerEvent('aty_gps:client:disableGps', ...)
-
--- aty_gps:client:notify
-TriggerEvent('aty_gps:client:notify', ...)
-
--- aty_gps:client:refresh
-TriggerEvent('aty_gps:client:refresh', ...)
-
--- aty_gps:client:usedGps
-TriggerEvent('aty_gps:client:usedGps', ...)
-
--- esx:playerLoaded
-TriggerEvent('esx:playerLoaded', ...)
-
--- esx:setJob
-TriggerEvent('esx:setJob', ...)
-
--- QBCore:Client:OnJobUpdate
-TriggerEvent('QBCore:Client:OnJobUpdate', ...)
-
--- QBCore:Client:OnPlayerLoaded
-TriggerEvent('QBCore:Client:OnPlayerLoaded', ...)
-
-```
-
-### Server Events
-
-```lua
--- aty_gps:server:openGps
-TriggerServerEvent('aty_gps:server:openGps', ...)
-
--- aty_gps:server:saveCode
-TriggerServerEvent('aty_gps:server:saveCode', ...)
-
--- esx:setJob
-TriggerServerEvent('esx:setJob', ...)
-
--- QBCore:Server:OnJobUpdate
-TriggerServerEvent('QBCore:Server:OnJobUpdate', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-*No exports found*
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -85,20 +44,22 @@ TriggerServerEvent('QBCore:Server:OnJobUpdate', ...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- aty_gps:server:getCoords
-TriggerCallback('aty_gps:server:getCoords', function(result)
-    -- handle result
+-- Callback: aty_gps:server:spectate", function(src, cb, target
+TriggerCallback('aty_gps:server:spectate", function(src, cb, target', function(result)
+    -- Handle result
 end)
 
--- aty_gps:server:getData
-TriggerCallback('aty_gps:server:getData', function(result)
-    -- handle result
+-- Callback: aty_gps:server:getData", function(src, cb
+TriggerCallback('aty_gps:server:getData", function(src, cb', function(result)
+    -- Handle result
 end)
 
--- aty_gps:server:spectate
-TriggerCallback('aty_gps:server:spectate', function(result)
-    -- handle result
+-- Callback: aty_gps:server:getCoords", function(_, cb, src
+TriggerCallback('aty_gps:server:getCoords", function(_, cb, src', function(result)
+    -- Handle result
 end)
 
 ```

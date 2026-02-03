@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-shop folder to your resources directory
 cp -r gfx-shop /path/to/resources/
 ```
 
@@ -21,26 +20,19 @@ ensure gfx-shop
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gfx-npcshop:reList
-TriggerEvent('gfx-npcshop:reList', ...)
-
--- gfx-shop:OpenMenu
-TriggerEvent('gfx-shop:OpenMenu', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-shop']:gfx-base(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

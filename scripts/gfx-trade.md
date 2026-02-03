@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-trade folder to your resources directory
 cp -r gfx-trade /path/to/resources/
 ```
 
@@ -21,50 +20,45 @@ ensure gfx-trade
 
 ---
 
+## Exports
+
+Exports that other scripts can call:
+
+*No exports found*
+
+---
+
 ## Events
 
-### Client Events
-
-```lua
--- gfx-trade:client:TradeRequest
-TriggerEvent('gfx-trade:client:TradeRequest', ...)
-
--- gfx-trade:CloseMenu
-TriggerEvent('gfx-trade:CloseMenu', ...)
-
--- gfx-trade:Open
-TriggerEvent('gfx-trade:Open', ...)
-
--- gfx-trade:SetReadyStatus
-TriggerEvent('gfx-trade:SetReadyStatus', ...)
-
--- gfx-trade:TradeAccepted
-TriggerEvent('gfx-trade:TradeAccepted', ...)
-
--- gfx-trade:UpdateSelectedItems
-TriggerEvent('gfx-trade:UpdateSelectedItems', ...)
-
-```
+Events that this script triggers (you can listen to these):
 
 ### Server Events
 
 ```lua
--- gfx-trade:CloseMenu
-TriggerServerEvent('gfx-trade:CloseMenu', ...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-trade:CloseMenu')
+AddEventHandler('gfx-trade:CloseMenu', function(...)
+    -- Handle event
+end)
 
--- gfx-trade:server:TradeResponse
-TriggerServerEvent('gfx-trade:server:TradeResponse', ...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-trade:SelectItem')
+AddEventHandler('gfx-trade:SelectItem', function(...)
+    -- Handle event
+end)
 
-```
+-- Listen to this event on server
+RegisterNetEvent('gfx-trade:server:TradeResponse')
+AddEventHandler('gfx-trade:server:TradeResponse', function(...)
+    -- Handle event
+end)
 
----
+-- Listen to this event on server
+RegisterNetEvent('gfx-trade:SetReady')
+AddEventHandler('gfx-trade:SetReady', function(...)
+    -- Handle event
+end)
 
-## Exports
-
-```lua
-exports['gfx-trade']:es_extended(...)
-exports['gfx-trade']:gfx-inventory(...)
-exports['gfx-trade']:qb-core(...)
 ```
 
 ---

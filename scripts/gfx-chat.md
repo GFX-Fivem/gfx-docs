@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-chat folder to your resources directory
 cp -r gfx-chat /path/to/resources/
 ```
 
@@ -21,28 +20,33 @@ ensure gfx-chat
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- chat:addMessage
-TriggerEvent('chat:addMessage', ...)
-
--- gfx-chat:addMessage
-TriggerEvent('gfx-chat:addMessage', ...)
-
--- gfx-chat:clear
-TriggerEvent('gfx-chat:clear', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
+
+Events that this script triggers (you can listen to these):
+
+### Server Events
 
 ```lua
-exports['gfx-chat']:gfx-base(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-chat:adminAction')
+AddEventHandler('gfx-chat:adminAction', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-chat:DiscordLog')
+AddEventHandler('gfx-chat:DiscordLog', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---

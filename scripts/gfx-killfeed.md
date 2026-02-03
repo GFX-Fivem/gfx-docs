@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-killfeed folder to your resources directory
 cp -r gfx-killfeed /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-killfeed /path/to/resources/
 ```cfg
 ensure gfx-killfeed
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -53,26 +49,19 @@ Config = {
 
 ---
 
-## Events
+## Exports
 
-*No events found*
+Exports that other scripts can call:
+
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-killfeed']:codem-inventory(...)
-exports['gfx-killfeed']:es_extended(...)
-exports['gfx-killfeed']:gfx-inventory(...)
-exports['gfx-killfeed']:ghmattimysql(...)
-exports['gfx-killfeed']:ox_inventory(...)
-exports['gfx-killfeed']:oxmysql(...)
-exports['gfx-killfeed']:ps-inventory(...)
-exports['gfx-killfeed']:qb-core(...)
-exports['gfx-killfeed']:qb-inventory(...)
-exports['gfx-killfeed']:qs-inventory(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

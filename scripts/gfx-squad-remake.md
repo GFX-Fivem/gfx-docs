@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-squad-remake folder to your resources directory
 cp -r gfx-squad-remake /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-squad-remake /path/to/resources/
 ```cfg
 ensure gfx-squad-remake
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -50,65 +46,32 @@ Config = {
 
 ---
 
-## Events
+## Exports
 
-### Client Events
-
-```lua
--- gfx-squad:AddRelationShip
-TriggerEvent('gfx-squad:AddRelationShip', ...)
-
--- gfx-squad:RemoveRelationShip
-TriggerEvent('gfx-squad:RemoveRelationShip', ...)
-
--- gfx-squad:updateUnseenCount
-TriggerEvent('gfx-squad:updateUnseenCount', ...)
-
--- kicked
-TriggerEvent('kicked', ...)
-
--- memberGone
-TriggerEvent('memberGone', ...)
-
--- newMessage
-TriggerEvent('newMessage', ...)
-
--- setInviteCount
-TriggerEvent('setInviteCount', ...)
-
--- squadDeleted
-TriggerEvent('squadDeleted', ...)
-
--- updateMembers
-TriggerEvent('updateMembers', ...)
-
-```
-
-### Server Events
+Exports that other scripts can call:
 
 ```lua
--- gfx-squad:playerLoaded
-TriggerServerEvent('gfx-squad:playerLoaded', ...)
+-- Export: GetSquadData
+local result = exports['gfx-squad-remake']:GetSquadData(source)
+
+-- Export: GetSquadId
+local result = exports['gfx-squad-remake']:GetSquadId(source)
+
+-- Export: GetSquadMembers
+local result = exports['gfx-squad-remake']:GetSquadMembers(source)
+
+-- Export: HasMemberGotASquad
+local result = exports['gfx-squad-remake']:HasMemberGotASquad(source)
 
 ```
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-squad-remake']:codem-inventory(...)
-exports['gfx-squad-remake']:es_extended(...)
-exports['gfx-squad-remake']:gfx-inventory(...)
-exports['gfx-squad-remake']:gfx-lib(...)
-exports['gfx-squad-remake']:ghmattimysql(...)
-exports['gfx-squad-remake']:ox_inventory(...)
-exports['gfx-squad-remake']:oxmysql(...)
-exports['gfx-squad-remake']:ps-inventory(...)
-exports['gfx-squad-remake']:qb-core(...)
-exports['gfx-squad-remake']:qb-inventory(...)
-exports['gfx-squad-remake']:qs-inventory(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -123,90 +86,97 @@ exports['gfx-squad-remake']:qs-inventory(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- checkSquadName
-TriggerCallback('checkSquadName', function(result)
-    -- handle result
+-- Callback: removeInvite', function(source, id
+TriggerCallback('removeInvite', function(source, id', function(result)
+    -- Handle result
 end)
 
--- createSquad
-TriggerCallback('createSquad', function(result)
-    -- handle result
+-- Callback: gfx-crew:getMemberCoords', function(source, member
+TriggerCallback('gfx-crew:getMemberCoords', function(source, member', function(result)
+    -- Handle result
 end)
 
--- deleteSquad
-TriggerCallback('deleteSquad', function(result)
-    -- handle result
+-- Callback: getInvites', function(source, data
+TriggerCallback('getInvites', function(source, data', function(result)
+    -- Handle result
 end)
 
--- getInvites
-TriggerCallback('getInvites', function(result)
-    -- handle result
+-- Callback: inviteMember', function(source, data
+TriggerCallback('inviteMember', function(source, data', function(result)
+    -- Handle result
 end)
 
--- getMembers
-TriggerCallback('getMembers', function(result)
-    -- handle result
+-- Callback: checkSquadName", function(source, data
+TriggerCallback('checkSquadName", function(source, data', function(result)
+    -- Handle result
 end)
 
--- getMessages
-TriggerCallback('getMessages', function(result)
-    -- handle result
+-- Callback: getSquads", function(source, data
+TriggerCallback('getSquads", function(source, data', function(result)
+    -- Handle result
 end)
 
--- getPlayers
-TriggerCallback('getPlayers', function(result)
-    -- handle result
+-- Callback: createSquad", function(source, data
+TriggerCallback('createSquad", function(source, data', function(result)
+    -- Handle result
 end)
 
--- getSquads
-TriggerCallback('getSquads', function(result)
-    -- handle result
+-- Callback: sendMessage', function(source, data
+TriggerCallback('sendMessage', function(source, data', function(result)
+    -- Handle result
 end)
 
--- getSquadSettings
-TriggerCallback('getSquadSettings', function(result)
-    -- handle result
+-- Callback: getMessages', function(source, data
+TriggerCallback('getMessages', function(source, data', function(result)
+    -- Handle result
 end)
 
--- gfx-crew:getMemberCoords
-TriggerCallback('gfx-crew:getMemberCoords', function(result)
-    -- handle result
+-- Callback: getMembers", function(source, data
+TriggerCallback('getMembers", function(source, data', function(result)
+    -- Handle result
 end)
 
--- inviteMember
-TriggerCallback('inviteMember', function(result)
-    -- handle result
+-- Callback: joinSquad", function(source, data
+TriggerCallback('joinSquad", function(source, data', function(result)
+    -- Handle result
 end)
 
--- joinSquad
-TriggerCallback('joinSquad', function(result)
-    -- handle result
+-- Callback: leaveSquad", function(source, data
+TriggerCallback('leaveSquad", function(source, data', function(result)
+    -- Handle result
 end)
 
--- kickMember
-TriggerCallback('kickMember', function(result)
-    -- handle result
+-- Callback: deleteSquad", function(source, data
+TriggerCallback('deleteSquad", function(source, data', function(result)
+    -- Handle result
 end)
 
--- leaveSquad
-TriggerCallback('leaveSquad', function(result)
-    -- handle result
+-- Callback: getSquadSettings", function(source
+TriggerCallback('getSquadSettings", function(source', function(result)
+    -- Handle result
 end)
 
--- removeInvite
-TriggerCallback('removeInvite', function(result)
-    -- handle result
+-- Callback: updateSquadSettings", function(source, data
+TriggerCallback('updateSquadSettings", function(source, data', function(result)
+    -- Handle result
 end)
 
--- sendMessage
-TriggerCallback('sendMessage', function(result)
-    -- handle result
+-- Callback: getPlayers", function(source
+TriggerCallback('getPlayers", function(source', function(result)
+    -- Handle result
 end)
 
--- updateSquadSettings
-TriggerCallback('updateSquadSettings', function(result)
-    -- handle result
+-- Callback: kickMember', function(source, data
+TriggerCallback('kickMember', function(source, data', function(result)
+    -- Handle result
+end)
+
+-- Callback: getSquadSettings', function(source
+TriggerCallback('getSquadSettings', function(source', function(result)
+    -- Handle result
 end)
 
 ```

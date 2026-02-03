@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-housecleaning folder to your resources directory
 cp -r gfx-housecleaning /path/to/resources/
 ```
 
@@ -21,36 +20,19 @@ ensure gfx-housecleaning
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- aty_housecleaning:closeMenu
-TriggerEvent('aty_housecleaning:closeMenu', ...)
-
--- aty_housecleaning:deleteSquad
-TriggerEvent('aty_housecleaning:deleteSquad', ...)
-
--- aty_housecleaning:fetchPositions
-TriggerEvent('aty_housecleaning:fetchPositions', ...)
-
--- aty_housecleaning:receiveInvite
-TriggerEvent('aty_housecleaning:receiveInvite', ...)
-
--- aty_housecleaning:refreshSquad
-TriggerEvent('aty_housecleaning:refreshSquad', ...)
-
--- aty_housecleaning:startMission
-TriggerEvent('aty_housecleaning:startMission', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-*No exports found*
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-effects folder to your resources directory
 cp -r gfx-effects /path/to/resources/
 ```
 
@@ -21,35 +20,46 @@ ensure gfx-effects
 
 ---
 
+## Exports
+
+Exports that other scripts can call:
+
+*No exports found*
+
+---
+
 ## Events
 
-### Client Events
-
-```lua
--- gfx-effect:client:effect
-TriggerEvent('gfx-effect:client:effect', ...)
-
--- gfx-effects:client:GetPlayerCurrentEffect
-TriggerEvent('gfx-effects:client:GetPlayerCurrentEffect', ...)
-
--- gfx-effects:client:SetVip
-TriggerEvent('gfx-effects:client:SetVip', ...)
-
-```
+Events that this script triggers (you can listen to these):
 
 ### Server Events
 
 ```lua
--- gfx-effects:server:RequestVip
-TriggerServerEvent('gfx-effects:server:RequestVip', ...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-effects:GetPlayerCurrentEffect')
+AddEventHandler('gfx-effects:GetPlayerCurrentEffect', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-effects:playerKilled')
+AddEventHandler('gfx-effects:playerKilled', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-effects:server:RequestVip')
+AddEventHandler('gfx-effects:server:RequestVip', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-effects:SetPtfxData')
+AddEventHandler('gfx-effects:SetPtfxData', function(...)
+    -- Handle event
+end)
 
 ```
-
----
-
-## Exports
-
-*No exports found*
 
 ---
 

@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-secondhand folder to your resources directory
 cp -r gfx-secondhand /path/to/resources/
 ```
 
@@ -21,60 +20,23 @@ ensure gfx-secondhand
 
 ---
 
-## Events
+## Exports
 
-### Client Events
-
-```lua
--- esx:playerLoaded
-TriggerEvent('esx:playerLoaded', ...)
-
--- Jakrino:Client:DeleteVehicle
-TriggerEvent('Jakrino:Client:DeleteVehicle', ...)
-
--- Jakrino:Client:OpenSellingPopUp
-TriggerEvent('Jakrino:Client:OpenSellingPopUp', ...)
-
--- Jakrino:Client:UpdateSecondHand
-TriggerEvent('Jakrino:Client:UpdateSecondHand', ...)
-
--- Jakrino:Client:UpdateVehicles
-TriggerEvent('Jakrino:Client:UpdateVehicles', ...)
-
--- Jakrino:Client:UpdateVehiclesData
-TriggerEvent('Jakrino:Client:UpdateVehiclesData', ...)
-
--- Jakrino:Client:ViewVehicle
-TriggerEvent('Jakrino:Client:ViewVehicle', ...)
-
--- onResourceStart
-TriggerEvent('onResourceStart', ...)
-
--- QBCore:Client:OnPlayerLoaded
-TriggerEvent('QBCore:Client:OnPlayerLoaded', ...)
-
-```
-
-### Server Events
+Exports that other scripts can call:
 
 ```lua
--- Jakrino:Server:SaveVehicle
-TriggerServerEvent('Jakrino:Server:SaveVehicle', ...)
+-- Export: IsParkingSlotOccupied
+local result = exports['gfx-secondhand']:IsParkingSlotOccupied(index, slotindex)
 
 ```
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-secondhand']:es_extended(...)
-exports['gfx-secondhand']:gfx-secondhand(...)
-exports['gfx-secondhand']:ghmattimysql(...)
-exports['gfx-secondhand']:oxmysql(...)
-exports['gfx-secondhand']:qb-core(...)
-exports['gfx-secondhand']:qb-target(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

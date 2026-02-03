@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-weed folder to your resources directory
 cp -r gfx-weed /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-weed /path/to/resources/
 ```cfg
 ensure gfx-weed
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -224,52 +220,19 @@ Config = {
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gfx-weed:client:openTable
-TriggerEvent('gfx-weed:client:openTable', ...)
-
--- gfx-weed:plant:place
-TriggerEvent('gfx-weed:plant:place', ...)
-
--- gfx-weed:sync:addWeed
-TriggerEvent('gfx-weed:sync:addWeed', ...)
-
--- gfx-weed:sync:deleteWeed
-TriggerEvent('gfx-weed:sync:deleteWeed', ...)
-
--- gfx-weed:sync:syncWeed
-TriggerEvent('gfx-weed:sync:syncWeed', ...)
-
-```
-
-### Server Events
-
-```lua
--- gfx-weed:server:syncWeed
-TriggerServerEvent('gfx-weed:server:syncWeed', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-weed']:codem-inventory(...)
-exports['gfx-weed']:es_extended(...)
-exports['gfx-weed']:gfx-inventory(...)
-exports['gfx-weed']:ghmattimysql(...)
-exports['gfx-weed']:ox_inventory(...)
-exports['gfx-weed']:oxmysql(...)
-exports['gfx-weed']:ps-inventory(...)
-exports['gfx-weed']:qb-core(...)
-exports['gfx-weed']:qb-inventory(...)
-exports['gfx-weed']:qs-inventory(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -288,75 +251,77 @@ exports['gfx-weed']:qs-inventory(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- gfx-weed:debug:setWeedValue
-TriggerCallback('gfx-weed:debug:setWeedValue', function(result)
-    -- handle result
+-- Callback: gfx-weed:sync:getCoords", function(
+TriggerCallback('gfx-weed:sync:getCoords", function(', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:destroy
-TriggerCallback('gfx-weed:destroy', function(result)
-    -- handle result
+-- Callback: gfx-weed:plant", function(source, coords, genetics, quality
+TriggerCallback('gfx-weed:plant", function(source, coords, genetics, quality', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:fertilize
-TriggerCallback('gfx-weed:fertilize', function(result)
-    -- handle result
+-- Callback: gfx-weed:water", function(source, id
+TriggerCallback('gfx-weed:water", function(source, id', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:harvest
-TriggerCallback('gfx-weed:harvest', function(result)
-    -- handle result
+-- Callback: gfx-weed:fertilize", function(source, id
+TriggerCallback('gfx-weed:fertilize", function(source, id', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:harvest:seeds
-TriggerCallback('gfx-weed:harvest:seeds', function(result)
-    -- handle result
+-- Callback: gfx-weed:destroy", function(source, id
+TriggerCallback('gfx-weed:destroy", function(source, id', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:HasEnoughWeed
-TriggerCallback('gfx-weed:HasEnoughWeed', function(result)
-    -- handle result
+-- Callback: gfx-weed:harvest", function(source, id
+TriggerCallback('gfx-weed:harvest", function(source, id', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:hasItem
-TriggerCallback('gfx-weed:hasItem', function(result)
-    -- handle result
+-- Callback: gfx-weed:harvest:seeds", function(source, id
+TriggerCallback('gfx-weed:harvest:seeds", function(source, id', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:plant
-TriggerCallback('gfx-weed:plant', function(result)
-    -- handle result
+-- Callback: gfx-weed:debug:setWeedValue", function(source, id, key, value
+TriggerCallback('gfx-weed:debug:setWeedValue", function(source, id, key, value', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:RequestSell
-TriggerCallback('gfx-weed:RequestSell', function(result)
-    -- handle result
+-- Callback: gfx-weed:hasItem", function(source, item, amount
+TriggerCallback('gfx-weed:hasItem", function(source, item, amount', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:server:getBudAmount
-TriggerCallback('gfx-weed:server:getBudAmount', function(result)
-    -- handle result
+-- Callback: gfx-weed:server:getBudAmount", function(source
+TriggerCallback('gfx-weed:server:getBudAmount", function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:server:getPaperAmount
-TriggerCallback('gfx-weed:server:getPaperAmount', function(result)
-    -- handle result
+-- Callback: gfx-weed:server:getPaperAmount", function(source
+TriggerCallback('gfx-weed:server:getPaperAmount", function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:server:rollJoint
-TriggerCallback('gfx-weed:server:rollJoint', function(result)
-    -- handle result
+-- Callback: gfx-weed:server:rollJoint", function(source
+TriggerCallback('gfx-weed:server:rollJoint", function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:sync:getCoords
-TriggerCallback('gfx-weed:sync:getCoords', function(result)
-    -- handle result
+-- Callback: gfx-weed:RequestSell', function(source, model
+TriggerCallback('gfx-weed:RequestSell', function(source, model', function(result)
+    -- Handle result
 end)
 
--- gfx-weed:water
-TriggerCallback('gfx-weed:water', function(result)
-    -- handle result
+-- Callback: gfx-weed:HasEnoughWeed', function(source
+TriggerCallback('gfx-weed:HasEnoughWeed', function(source', function(result)
+    -- Handle result
 end)
 
 ```

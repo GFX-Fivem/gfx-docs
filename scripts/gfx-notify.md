@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-notify folder to your resources directory
 cp -r gfx-notify /path/to/resources/
 ```
 
@@ -21,26 +20,23 @@ ensure gfx-notify
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
 ```lua
--- gfx-notify:Notify
-TriggerEvent('gfx-notify:Notify', ...)
-
--- gfx-notify:Question
-TriggerEvent('gfx-notify:Question', ...)
+-- Export: IsVehicleInFair
+local result = exports['gfx-notify']:IsVehicleInFair(plate)
 
 ```
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-notify']:qb-core(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

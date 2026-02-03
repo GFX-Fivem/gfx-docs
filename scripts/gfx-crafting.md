@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-crafting folder to your resources directory
 cp -r gfx-crafting /path/to/resources/
 ```
 
@@ -21,17 +20,19 @@ ensure gfx-crafting
 
 ---
 
-## Events
+## Exports
 
-*No events found*
+Exports that other scripts can call:
+
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-crafting']:gfx-base(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

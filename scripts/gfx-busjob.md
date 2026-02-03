@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-busjob folder to your resources directory
 cp -r gfx-busjob /path/to/resources/
 ```
 
@@ -21,36 +20,19 @@ ensure gfx-busjob
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- aty_busjob:client:toggleMenu
-TriggerEvent('aty_busjob:client:toggleMenu', ...)
-
--- esx:playerLoaded
-TriggerEvent('esx:playerLoaded', ...)
-
--- esx:setJob
-TriggerEvent('esx:setJob', ...)
-
--- QBCore:Client:OnJobUpdate
-TriggerEvent('QBCore:Client:OnJobUpdate', ...)
-
--- QBCore:Client:OnPlayerLoaded
-TriggerEvent('QBCore:Client:OnPlayerLoaded', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-busjob']:ox_target(...)
-exports['gfx-busjob']:qb-target(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

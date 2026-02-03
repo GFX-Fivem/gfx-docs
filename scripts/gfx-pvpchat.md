@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-pvpchat folder to your resources directory
 cp -r gfx-pvpchat /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-pvpchat /path/to/resources/
 ```cfg
 ensure gfx-pvpchat
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -70,51 +66,26 @@ Config = {
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
 ```lua
--- chat:addMessage
-TriggerEvent('chat:addMessage', ...)
+-- Export: GetPlayerColor
+local result = exports['gfx-pvpchat']:GetPlayerColor()
 
--- chat:addSuggestions
-TriggerEvent('chat:addSuggestions', ...)
-
--- chat:server:addSuggestions
-TriggerEvent('chat:server:addSuggestions', ...)
-
--- chat:server:playerMuted
-TriggerEvent('chat:server:playerMuted', ...)
-
--- chat:server:unMutePlayer
-TriggerEvent('chat:server:unMutePlayer', ...)
-
--- gfx-crew:receiveMessage
-TriggerEvent('gfx-crew:receiveMessage', ...)
-
--- newMessage
-TriggerEvent('newMessage', ...)
+-- Export: GetPlayerColor
+local result = exports['gfx-pvpchat']:GetPlayerColor(player)
 
 ```
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-pvpchat']:codem-inventory(...)
-exports['gfx-pvpchat']:es_extended(...)
-exports['gfx-pvpchat']:gfx-crew(...)
-exports['gfx-pvpchat']:gfx-inventory(...)
-exports['gfx-pvpchat']:ghmattimysql(...)
-exports['gfx-pvpchat']:ox_inventory(...)
-exports['gfx-pvpchat']:oxmysql(...)
-exports['gfx-pvpchat']:ps-inventory(...)
-exports['gfx-pvpchat']:qb-core(...)
-exports['gfx-pvpchat']:qb-inventory(...)
-exports['gfx-pvpchat']:qs-inventory(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -130,25 +101,27 @@ exports['gfx-pvpchat']:qs-inventory(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- chat:mutePlayer
-TriggerCallback('chat:mutePlayer', function(result)
-    -- handle result
+-- Callback: getUsers', function(source
+TriggerCallback('getUsers', function(source', function(result)
+    -- Handle result
 end)
 
--- chat:unmutePlayer
-TriggerCallback('chat:unmutePlayer', function(result)
-    -- handle result
+-- Callback: chat:mutePlayer', function(source, data
+TriggerCallback('chat:mutePlayer', function(source, data', function(result)
+    -- Handle result
 end)
 
--- getColor
-TriggerCallback('getColor', function(result)
-    -- handle result
+-- Callback: chat:unmutePlayer', function(source, data
+TriggerCallback('chat:unmutePlayer', function(source, data', function(result)
+    -- Handle result
 end)
 
--- getUsers
-TriggerCallback('getUsers', function(result)
-    -- handle result
+-- Callback: getColor', function(source, target
+TriggerCallback('getColor', function(source, target', function(result)
+    -- Handle result
 end)
 
 ```

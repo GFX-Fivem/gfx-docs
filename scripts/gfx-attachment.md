@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-attachment folder to your resources directory
 cp -r gfx-attachment /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-attachment /path/to/resources/
 ```cfg
 ensure gfx-attachment
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -24,32 +20,27 @@ ensure gfx-attachment
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- gfx-attachment:client:open
-TriggerEvent('gfx-attachment:client:open', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
+
+Events that this script triggers (you can listen to these):
+
+### Server Events
 
 ```lua
-exports['gfx-attachment']:codem-inventory(...)
-exports['gfx-attachment']:es_extended(...)
-exports['gfx-attachment']:gfx-inventory(...)
-exports['gfx-attachment']:ghmattimysql(...)
-exports['gfx-attachment']:ox_inventory(...)
-exports['gfx-attachment']:oxmysql(...)
-exports['gfx-attachment']:ps-inventory(...)
-exports['gfx-attachment']:qb-core(...)
-exports['gfx-attachment']:qb-inventory(...)
-exports['gfx-attachment']:qb-target(...)
-exports['gfx-attachment']:qs-inventory(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-attachment:server:saveWeapon')
+AddEventHandler('gfx-attachment:server:saveWeapon', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---
@@ -66,15 +57,22 @@ exports['gfx-attachment']:qs-inventory(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- getAttachments
-TriggerCallback('getAttachments', function(result)
-    -- handle result
+-- Callback: getAttachments", function(source, weaponName
+TriggerCallback('getAttachments", function(source, weaponName', function(result)
+    -- Handle result
 end)
 
--- getWeapons
-TriggerCallback('getWeapons', function(result)
-    -- handle result
+-- Callback: getAttachments", function(source, weaponName
+TriggerCallback('getAttachments", function(source, weaponName', function(result)
+    -- Handle result
+end)
+
+-- Callback: getWeapons", function(source
+TriggerCallback('getWeapons", function(source', function(result)
+    -- Handle result
 end)
 
 ```

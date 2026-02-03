@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-gunmenu folder to your resources directory
 cp -r gfx-gunmenu /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-gunmenu /path/to/resources/
 ```cfg
 ensure gfx-gunmenu
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -24,25 +20,27 @@ ensure gfx-gunmenu
 
 ---
 
+## Exports
+
+Exports that other scripts can call:
+
+*No exports found*
+
+---
+
 ## Events
+
+Events that this script triggers (you can listen to these):
 
 ### Client Events
 
 ```lua
--- gfx-gunmenu:openMenu
-TriggerEvent('gfx-gunmenu:openMenu', ...)
+-- Listen to this event
+RegisterNetEvent('gfx-gunmenu:deleteWeapons')
+AddEventHandler('gfx-gunmenu:deleteWeapons', function(...)
+    -- Handle event
+end)
 
-```
-
----
-
-## Exports
-
-```lua
-exports['gfx-gunmenu']:es_extended(...)
-exports['gfx-gunmenu']:gfx-inventory(...)
-exports['gfx-gunmenu']:ox_inventory(...)
-exports['gfx-gunmenu']:qb-core(...)
 ```
 
 ---
@@ -58,15 +56,17 @@ exports['gfx-gunmenu']:qb-core(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- gfx-gun:validItem
-TriggerCallback('gfx-gun:validItem', function(result)
-    -- handle result
+-- Callback: gfx-gun:validItem", function(source, data
+TriggerCallback('gfx-gun:validItem", function(source, data', function(result)
+    -- Handle result
 end)
 
--- gfx-mdt:buyWeapon
-TriggerCallback('gfx-mdt:buyWeapon', function(result)
-    -- handle result
+-- Callback: gfx-mdt:buyWeapon", function(source, data
+TriggerCallback('gfx-mdt:buyWeapon", function(source, data', function(result)
+    -- Handle result
 end)
 
 ```

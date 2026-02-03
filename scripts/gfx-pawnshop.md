@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-pawnshop folder to your resources directory
 cp -r gfx-pawnshop /path/to/resources/
 ```
 
@@ -21,68 +20,19 @@ ensure gfx-pawnshop
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- esx:playerLoaded
-TriggerEvent('esx:playerLoaded', ...)
-
--- Jakrino_PawnShop:Client:GetTriflesData
-TriggerEvent('Jakrino_PawnShop:Client:GetTriflesData', ...)
-
--- Jakrino_PawnShop:Client:GetUserData
-TriggerEvent('Jakrino_PawnShop:Client:GetUserData', ...)
-
--- Jakrino_PawnShop:Client:OpenBossMenu
-TriggerEvent('Jakrino_PawnShop:Client:OpenBossMenu', ...)
-
--- Jakrino_PawnShop:Client:OpenSellingMenu
-TriggerEvent('Jakrino_PawnShop:Client:OpenSellingMenu', ...)
-
--- Jakrino_PawnShop:Client:StartUI
-TriggerEvent('Jakrino_PawnShop:Client:StartUI', ...)
-
--- onResourceStart
-TriggerEvent('onResourceStart', ...)
-
--- QBCore:Client:OnPlayerLoaded
-TriggerEvent('QBCore:Client:OnPlayerLoaded', ...)
-
-```
-
-### Server Events
-
-```lua
--- Jakrino_PawnShop:Server:BuyPawnShop
-TriggerServerEvent('Jakrino_PawnShop:Server:BuyPawnShop', ...)
-
--- Jakrino_PawnShop:Server:CostEdit
-TriggerServerEvent('Jakrino_PawnShop:Server:CostEdit', ...)
-
--- Jakrino_PawnShop:Server:GetBonus
-TriggerServerEvent('Jakrino_PawnShop:Server:GetBonus', ...)
-
--- Jakrino_PawnShop:Server:MoneyEdit
-TriggerServerEvent('Jakrino_PawnShop:Server:MoneyEdit', ...)
-
--- Jakrino_PawnShop:Server:ShowEdit
-TriggerServerEvent('Jakrino_PawnShop:Server:ShowEdit', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-pawnshop']:es_extended(...)
-exports['gfx-pawnshop']:ghmattimysql(...)
-exports['gfx-pawnshop']:oxmysql(...)
-exports['gfx-pawnshop']:qb-core(...)
-exports['gfx-pawnshop']:qb-target(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -94,30 +44,32 @@ exports['gfx-pawnshop']:qb-target(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- GetShopDataForAll
-TriggerCallback('GetShopDataForAll', function(result)
-    -- handle result
+-- Callback: SelledItem", function(source, itemIndex, shopIndex
+TriggerCallback('SelledItem", function(source, itemIndex, shopIndex', function(result)
+    -- Handle result
 end)
 
--- GetShopDataForTrifles
-TriggerCallback('GetShopDataForTrifles', function(result)
-    -- handle result
+-- Callback: ItemEdit", function(source, itemIndex, shopIndex, selectType
+TriggerCallback('ItemEdit", function(source, itemIndex, shopIndex, selectType', function(result)
+    -- Handle result
 end)
 
--- GetUserDataForNpc
-TriggerCallback('GetUserDataForNpc', function(result)
-    -- handle result
+-- Callback: GetUserDataForNpc", function(source
+TriggerCallback('GetUserDataForNpc", function(source', function(result)
+    -- Handle result
 end)
 
--- ItemEdit
-TriggerCallback('ItemEdit', function(result)
-    -- handle result
+-- Callback: GetShopDataForTrifles", function(source, index
+TriggerCallback('GetShopDataForTrifles", function(source, index', function(result)
+    -- Handle result
 end)
 
--- SelledItem
-TriggerCallback('SelledItem', function(result)
-    -- handle result
+-- Callback: GetShopDataForAll", function(source, index
+TriggerCallback('GetShopDataForAll", function(source, index', function(result)
+    -- Handle result
 end)
 
 ```

@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-arena folder to your resources directory
 cp -r gfx-arena /path/to/resources/
 ```
 
@@ -21,55 +20,43 @@ ensure gfx-arena
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
 ```lua
--- gfx-arena:LeaveLobby
-TriggerEvent('gfx-arena:LeaveLobby', ...)
-
--- gfx-arena:MatchEnd
-TriggerEvent('gfx-arena:MatchEnd', ...)
-
--- gfx-arena:notify
-TriggerEvent('gfx-arena:notify', ...)
-
--- gfx-arena:ReadyTimer
-TriggerEvent('gfx-arena:ReadyTimer', ...)
-
--- gfx-arena:RoundEnd
-TriggerEvent('gfx-arena:RoundEnd', ...)
-
--- gfx-arena:RoundStart
-TriggerEvent('gfx-arena:RoundStart', ...)
-
--- gfx-arena:StartMatch
-TriggerEvent('gfx-arena:StartMatch', ...)
-
--- gfx-arena:UpdateCurrentLobby
-TriggerEvent('gfx-arena:UpdateCurrentLobby', ...)
-
--- gfx-arena:UpdateHud
-TriggerEvent('gfx-arena:UpdateHud', ...)
-
--- gfx-squad:AddRelationShip
-TriggerEvent('gfx-squad:AddRelationShip', ...)
-
--- gfx-squad:RemoveRelationShip
-TriggerEvent('gfx-squad:RemoveRelationShip', ...)
+-- Export: IsPlayerInMatch
+local result = exports['gfx-arena']:IsPlayerInMatch()
 
 ```
 
 ---
 
-## Exports
+## Events
+
+Events that this script triggers (you can listen to these):
+
+### Server Events
 
 ```lua
-exports['gfx-arena']:es_extended(...)
-exports['gfx-arena']:ghmattimysql(...)
-exports['gfx-arena']:oxmysql(...)
-exports['gfx-arena']:qb-core(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-arena:playerKilled')
+AddEventHandler('gfx-arena:playerKilled', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-arena:SwitchTeam')
+AddEventHandler('gfx-arena:SwitchTeam', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-arena:UpdateLobby')
+AddEventHandler('gfx-arena:UpdateLobby', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---
@@ -88,35 +75,37 @@ exports['gfx-arena']:qb-core(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- getHomepageData
-TriggerCallback('getHomepageData', function(result)
-    -- handle result
+-- Callback: getHomepageData", function(source
+TriggerCallback('getHomepageData", function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-arena:CreateLobby
-TriggerCallback('gfx-arena:CreateLobby', function(result)
-    -- handle result
+-- Callback: gfx-arena:CreateLobby", function(source, data
+TriggerCallback('gfx-arena:CreateLobby", function(source, data', function(result)
+    -- Handle result
 end)
 
--- gfx-arena:GetLobbies
-TriggerCallback('gfx-arena:GetLobbies', function(result)
-    -- handle result
+-- Callback: gfx-arena:JoinLobby", function(source, data
+TriggerCallback('gfx-arena:JoinLobby", function(source, data', function(result)
+    -- Handle result
 end)
 
--- gfx-arena:JoinLobby
-TriggerCallback('gfx-arena:JoinLobby', function(result)
-    -- handle result
+-- Callback: gfx-arena:LeaveLobby", function(source
+TriggerCallback('gfx-arena:LeaveLobby", function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-arena:LeaveLobby
-TriggerCallback('gfx-arena:LeaveLobby', function(result)
-    -- handle result
+-- Callback: gfx-arena:SetReady", function(source
+TriggerCallback('gfx-arena:SetReady", function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-arena:SetReady
-TriggerCallback('gfx-arena:SetReady', function(result)
-    -- handle result
+-- Callback: gfx-arena:GetLobbies", function(source, filter
+TriggerCallback('gfx-arena:GetLobbies", function(source, filter', function(result)
+    -- Handle result
 end)
 
 ```

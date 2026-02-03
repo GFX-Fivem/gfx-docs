@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-evidence folder to your resources directory
 cp -r gfx-evidence /path/to/resources/
 ```
 
@@ -21,44 +20,57 @@ ensure gfx-evidence
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- esx:setJob
-TriggerEvent('esx:setJob', ...)
-
--- gfx-evidence:client:analyze
-TriggerEvent('gfx-evidence:client:analyze', ...)
-
--- gfx-evidence:client:dropBlood
-TriggerEvent('gfx-evidence:client:dropBlood', ...)
-
--- gfx-evidence:client:dropBulletCore
-TriggerEvent('gfx-evidence:client:dropBulletCore', ...)
-
--- gfx-evidence:client:dropCasing
-TriggerEvent('gfx-evidence:client:dropCasing', ...)
-
--- gfx-evidence:client:removeEvidence
-TriggerEvent('gfx-evidence:client:removeEvidence', ...)
-
--- QBCore:Client:OnJobUpdate
-TriggerEvent('QBCore:Client:OnJobUpdate', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
+
+Events that this script triggers (you can listen to these):
+
+### Server Events
 
 ```lua
-exports['gfx-evidence']:es_extended(...)
-exports['gfx-evidence']:ghmattimysql(...)
-exports['gfx-evidence']:oxmysql(...)
-exports['gfx-evidence']:qb-core(...)
-exports['gfx-evidence']:qb-weapons(...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-evidence:server:analyze')
+AddEventHandler('gfx-evidence:server:analyze', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-evidence:server:dropBlood')
+AddEventHandler('gfx-evidence:server:dropBlood', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-evidence:server:dropBulletCore')
+AddEventHandler('gfx-evidence:server:dropBulletCore', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-evidence:server:dropCasing')
+AddEventHandler('gfx-evidence:server:dropCasing', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-evidence:server:dropFingerPrint')
+AddEventHandler('gfx-evidence:server:dropFingerPrint', function(...)
+    -- Handle event
+end)
+
+-- Listen to this event on server
+RegisterNetEvent('gfx-evidence:server:takeEvidence')
+AddEventHandler('gfx-evidence:server:takeEvidence', function(...)
+    -- Handle event
+end)
+
 ```
 
 ---
@@ -71,15 +83,17 @@ exports['gfx-evidence']:qb-weapons(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- gfx-evidence:AddPreviousAnalyze
-TriggerCallback('gfx-evidence:AddPreviousAnalyze', function(result)
-    -- handle result
+-- Callback: gfx-evidence:getPreviousAnalyzes', function(
+TriggerCallback('gfx-evidence:getPreviousAnalyzes', function(', function(result)
+    -- Handle result
 end)
 
--- gfx-evidence:getPreviousAnalyzes
-TriggerCallback('gfx-evidence:getPreviousAnalyzes', function(result)
-    -- handle result
+-- Callback: gfx-evidence:AddPreviousAnalyze', function(source, data
+TriggerCallback('gfx-evidence:AddPreviousAnalyze', function(source, data', function(result)
+    -- Handle result
 end)
 
 ```

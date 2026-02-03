@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-vehicleshop folder to your resources directory
 cp -r gfx-vehicleshop /path/to/resources/
 ```
 
@@ -21,45 +20,19 @@ ensure gfx-vehicleshop
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- aty_vehicleshop:client:openMenu
-TriggerEvent('aty_vehicleshop:client:openMenu', ...)
-
--- aty_vehicleshop:client:sendStock
-TriggerEvent('aty_vehicleshop:client:sendStock', ...)
-
--- aty_vehicleshop:setPlate
-TriggerEvent('aty_vehicleshop:setPlate', ...)
-
--- esx:playerLoaded
-TriggerEvent('esx:playerLoaded', ...)
-
--- esx:setJob
-TriggerEvent('esx:setJob', ...)
-
--- QBCore:Client:OnJobUpdate
-TriggerEvent('QBCore:Client:OnJobUpdate', ...)
-
--- QBCore:Client:OnPlayerLoaded
-TriggerEvent('QBCore:Client:OnPlayerLoaded', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-vehicleshop']:es_extended(...)
-exports['gfx-vehicleshop']:ghmattimysql(...)
-exports['gfx-vehicleshop']:mysql-async(...)
-exports['gfx-vehicleshop']:oxmysql(...)
-exports['gfx-vehicleshop']:qb-core(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

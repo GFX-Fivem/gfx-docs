@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-airdrop folder to your resources directory
 cp -r gfx-airdrop /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-airdrop /path/to/resources/
 ```cfg
 ensure gfx-airdrop
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -53,75 +49,27 @@ Config = {
 
 ---
 
+## Exports
+
+Exports that other scripts can call:
+
+*No exports found*
+
+---
+
 ## Events
 
-### Client Events
-
-```lua
--- gfx-airdrop:Announce
-TriggerEvent('gfx-airdrop:Announce', ...)
-
--- gfx-airdrop:client:OpenAirDrop
-TriggerEvent('gfx-airdrop:client:OpenAirDrop', ...)
-
--- gfx-airdrop:client:OpenMenu
-TriggerEvent('gfx-airdrop:client:OpenMenu', ...)
-
--- gfx-airdrop:CreateAirDrop
-TriggerEvent('gfx-airdrop:CreateAirDrop', ...)
-
--- gfx-airdrop:DrawText
-TriggerEvent('gfx-airdrop:DrawText', ...)
-
--- gfx-airdrop:Notify
-TriggerEvent('gfx-airdrop:Notify', ...)
-
--- gfx-airdrop:RemoveDrop
-TriggerEvent('gfx-airdrop:RemoveDrop', ...)
-
--- gfx-airdrop:setData
-TriggerEvent('gfx-airdrop:setData', ...)
-
--- gfx-airdrop:update
-TriggerEvent('gfx-airdrop:update', ...)
-
-```
+Events that this script triggers (you can listen to these):
 
 ### Server Events
 
 ```lua
--- adminairdrop
-TriggerServerEvent('adminairdrop', ...)
+-- Listen to this event on server
+RegisterNetEvent('gfx-airdrop:server:OpenAirDrop')
+AddEventHandler('gfx-airdrop:server:OpenAirDrop', function(...)
+    -- Handle event
+end)
 
--- gfx-airdrop:server:OpenAirDrop
-TriggerServerEvent('gfx-airdrop:server:OpenAirDrop', ...)
-
--- rush_eventManager:airdrop:server:AirDropEvent
-TriggerServerEvent('rush_eventManager:airdrop:server:AirDropEvent', ...)
-
--- rush-airdrop:server:AirdropDisableEvent
-TriggerServerEvent('rush-airdrop:server:AirdropDisableEvent', ...)
-
-```
-
----
-
-## Exports
-
-```lua
-exports['gfx-airdrop']:chat(...)
-exports['gfx-airdrop']:codem-inventory(...)
-exports['gfx-airdrop']:es_extended(...)
-exports['gfx-airdrop']:gfx-inventory(...)
-exports['gfx-airdrop']:ghmattimysql(...)
-exports['gfx-airdrop']:ox_inventory(...)
-exports['gfx-airdrop']:oxmysql(...)
-exports['gfx-airdrop']:ps-inventory(...)
-exports['gfx-airdrop']:qb-core(...)
-exports['gfx-airdrop']:qb-inventory(...)
-exports['gfx-airdrop']:qs-inventory(...)
-exports['gfx-airdrop']:rush_base(...)
-exports['gfx-airdrop']:rush_core(...)
 ```
 
 ---
@@ -143,25 +91,27 @@ exports['gfx-airdrop']:rush_core(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- gfx-airdrop:server:CreateAirDrop
-TriggerCallback('gfx-airdrop:server:CreateAirDrop', function(result)
-    -- handle result
+-- Callback: gfx-airdrop:server:GetAirDrops', function (source
+TriggerCallback('gfx-airdrop:server:GetAirDrops', function (source', function(result)
+    -- Handle result
 end)
 
--- gfx-airdrop:server:DeleteAirDrop
-TriggerCallback('gfx-airdrop:server:DeleteAirDrop', function(result)
-    -- handle result
+-- Callback: gfx-airdrop:server:GetAirDropItems', function(
+TriggerCallback('gfx-airdrop:server:GetAirDropItems', function(', function(result)
+    -- Handle result
 end)
 
--- gfx-airdrop:server:GetAirDropItems
-TriggerCallback('gfx-airdrop:server:GetAirDropItems', function(result)
-    -- handle result
+-- Callback: gfx-airdrop:server:CreateAirDrop', function(source, data
+TriggerCallback('gfx-airdrop:server:CreateAirDrop', function(source, data', function(result)
+    -- Handle result
 end)
 
--- gfx-airdrop:server:GetAirDrops
-TriggerCallback('gfx-airdrop:server:GetAirDrops', function(result)
-    -- handle result
+-- Callback: gfx-airdrop:server:DeleteAirDrop', function(source, id
+TriggerCallback('gfx-airdrop:server:DeleteAirDrop', function(source, id', function(result)
+    -- Handle result
 end)
 
 ```

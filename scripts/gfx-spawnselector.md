@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-spawnselector folder to your resources directory
 cp -r gfx-spawnselector /path/to/resources/
 ```
 
@@ -12,9 +11,6 @@ cp -r gfx-spawnselector /path/to/resources/
 ```cfg
 ensure gfx-spawnselector
 ```
-
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
 
 ---
 
@@ -93,26 +89,19 @@ Config = {
 
 ---
 
-## Events
+## Exports
 
-*No events found*
+Exports that other scripts can call:
+
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-spawnselector']:codem-inventory(...)
-exports['gfx-spawnselector']:es_extended(...)
-exports['gfx-spawnselector']:gfx-inventory(...)
-exports['gfx-spawnselector']:ghmattimysql(...)
-exports['gfx-spawnselector']:ox_inventory(...)
-exports['gfx-spawnselector']:oxmysql(...)
-exports['gfx-spawnselector']:ps-inventory(...)
-exports['gfx-spawnselector']:qb-core(...)
-exports['gfx-spawnselector']:qb-inventory(...)
-exports['gfx-spawnselector']:qs-inventory(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 

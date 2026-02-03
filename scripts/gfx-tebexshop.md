@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-tebexshop folder to your resources directory
 cp -r gfx-tebexshop /path/to/resources/
 ```
 
@@ -21,24 +20,32 @@ ensure gfx-tebexshop
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
 ```lua
--- gfx-tebexshop:updateUserData
-TriggerEvent('gfx-tebexshop:updateUserData', ...)
+-- Export: GetPlayerCoins
+local result = exports['gfx-tebexshop']:GetPlayerCoins()
+
+-- Export: GetPlayerCoins
+local result = exports['gfx-tebexshop']:GetPlayerCoins(source)
+
+-- Export: GetPlayerTier
+local result = exports['gfx-tebexshop']:GetPlayerTier()
+
+-- Export: GetPlayerTier
+local result = exports['gfx-tebexshop']:GetPlayerTier(source)
 
 ```
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-tebexshop']:ghmattimysql(...)
-exports['gfx-tebexshop']:oxmysql(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -54,50 +61,52 @@ exports['gfx-tebexshop']:oxmysql(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- gfx-tebexshop:buyBoost
-TriggerCallback('gfx-tebexshop:buyBoost', function(result)
-    -- handle result
+-- Callback: gfx-tebexshop:getPlayerSkins', function(source
+TriggerCallback('gfx-tebexshop:getPlayerSkins', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-tebexshop:buySkin
-TriggerCallback('gfx-tebexshop:buySkin', function(result)
-    -- handle result
+-- Callback: gfx-tebexshop:claimCode', function(source, code
+TriggerCallback('gfx-tebexshop:claimCode', function(source, code', function(result)
+    -- Handle result
 end)
 
--- gfx-tebexshop:buyTier
-TriggerCallback('gfx-tebexshop:buyTier', function(result)
-    -- handle result
+-- Callback: gfx-tebexshop:getUserData", function(source
+TriggerCallback('gfx-tebexshop:getUserData", function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-tebexshop:claimCode
-TriggerCallback('gfx-tebexshop:claimCode', function(result)
-    -- handle result
+-- Callback: gfx-tebexshop:buyBoost', function(source, cardData
+TriggerCallback('gfx-tebexshop:buyBoost', function(source, cardData', function(result)
+    -- Handle result
 end)
 
--- gfx-tebexshop:equipSkin
-TriggerCallback('gfx-tebexshop:equipSkin', function(result)
-    -- handle result
+-- Callback: gfx-tebexshop:buyTier', function(source, id
+TriggerCallback('gfx-tebexshop:buyTier', function(source, id', function(result)
+    -- Handle result
 end)
 
--- gfx-tebexshop:getPlayerSkins
-TriggerCallback('gfx-tebexshop:getPlayerSkins', function(result)
-    -- handle result
+-- Callback: gfx-tebexshop:buySkin', function(source, skinId
+TriggerCallback('gfx-tebexshop:buySkin', function(source, skinId', function(result)
+    -- Handle result
 end)
 
--- gfx-tebexshop:getTransactions
-TriggerCallback('gfx-tebexshop:getTransactions', function(result)
-    -- handle result
+-- Callback: gfx-tebexshop:equipSkin', function(source, skinId
+TriggerCallback('gfx-tebexshop:equipSkin', function(source, skinId', function(result)
+    -- Handle result
 end)
 
--- gfx-tebexshop:getUserData
-TriggerCallback('gfx-tebexshop:getUserData', function(result)
-    -- handle result
+-- Callback: gfx-tebexshop:getTransactions', function(source
+TriggerCallback('gfx-tebexshop:getTransactions', function(source', function(result)
+    -- Handle result
 end)
 
--- gfx-tebexshop:refundTransaction
-TriggerCallback('gfx-tebexshop:refundTransaction', function(result)
-    -- handle result
+-- Callback: gfx-tebexshop:refundTransaction', function(source, transactionId
+TriggerCallback('gfx-tebexshop:refundTransaction', function(source, transactionId', function(result)
+    -- Handle result
 end)
 
 ```

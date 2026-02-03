@@ -1,22 +1,38 @@
 #!/bin/bash
 
 # GFX Detailed Documentation Generator (English)
-# Extracts events, exports, commands from source code
+# Extracts CREATED events and exports (not used ones)
 
 DOCS_DIR="$HOME/gfx-docs/scripts"
 LOG_FILE="$HOME/gfx-docs/detailed-generation.log"
 
 echo "Starting detailed documentation generation at $(date)" > "$LOG_FILE"
 
-extract_events() {
+# Extract events that this script TRIGGERS (broadcasts) - others can listen to these
+extract_triggered_events() {
     local content="$1"
-    echo "$content" | grep -oE "RegisterNetEvent\(['\"]([^'\"]+)" | sed "s/RegisterNetEvent(['\"]//g" | sort -u
+
+    # TriggerClientEvent(-1, 'event' or TriggerClientEvent(source, 'event'
+    echo "$content" | grep -oE "TriggerClientEvent\([^,]+,\s*['\"]([^'\"]+)" | sed "s/TriggerClientEvent([^,]*,\s*['\"]//g" | sort -u
+
+    # TriggerEvent('event'
+    echo "$content" | grep -oE "TriggerEvent\(['\"]([^'\"]+)" | sed "s/TriggerEvent(['\"]//g" | sort -u
 }
 
-extract_exports() {
+extract_server_triggered_events() {
     local content="$1"
-    echo "$content" | grep -oE "exports\[['\"]([^'\"]+)" | sed "s/exports\[['\"]//g" | sort -u
-    echo "$content" | grep -oE "exports\.[a-zA-Z_][a-zA-Z0-9_]*" | sed "s/exports\.//g" | sort -u
+
+    # TriggerServerEvent('event'
+    echo "$content" | grep -oE "TriggerServerEvent\(['\"]([^'\"]+)" | sed "s/TriggerServerEvent(['\"]//g" | sort -u
+}
+
+# Extract exports that this script CREATES - others can call these
+extract_created_exports() {
+    local content="$1"
+
+    # Pattern: exports('functionName', function(param1, param2)
+    # Extracts function name and parameters
+    echo "$content" | sed -n "s/.*exports(['\"]\\([^'\"]*\\)['\"],.*function(\\([^)]*\\)).*/\\1|\\2/p" | sort -u
 }
 
 extract_commands() {
@@ -26,8 +42,11 @@ extract_commands() {
 
 extract_callbacks() {
     local content="$1"
-    echo "$content" | grep -oE "RegisterCallback\(['\"]([^'\"]+)" | sed "s/RegisterCallback(['\"]//g" | sort -u
-    echo "$content" | grep -oE "TriggerCallback\(['\"]([^'\"]+)" | sed "s/TriggerCallback(['\"]//g" | sort -u
+    # Extract RegisterCallback with function parameters
+    echo "$content" | grep -oE "RegisterCallback\(['\"]([^'\"]+)['\"],\s*function\s*\(([^)]*)\)" | \
+        sed "s/RegisterCallback(['\"]//g" | \
+        sed "s/['\"],\s*function\s*(/|/g" | \
+        sed "s/)$//g"
 }
 
 get_all_lua_content() {
@@ -65,36 +84,29 @@ generate_detailed_doc() {
     local has_web=$(echo "$contents" | jq -r '.[] | select(.name == "web") | .name' 2>/dev/null)
     local has_shared=$(echo "$contents" | jq -r '.[] | select(.name == "shared") | .name' 2>/dev/null)
 
-    # Get all client content
+    # Get all content
     local client_content=""
     if [ -n "$has_client" ]; then
         client_content=$(get_all_lua_content "$repo" "client")
     fi
 
-    # Get all server content
     local server_content=""
     if [ -n "$has_server" ]; then
         server_content=$(get_all_lua_content "$repo" "server")
     fi
 
-    # Get config content
-    local config_content=""
-    if [ -n "$has_config" ]; then
-        config_content=$(get_all_lua_content "$repo" "config")
-    fi
+    # Extract CREATED exports (not used ones)
+    local client_exports=$(extract_created_exports "$client_content")
+    local server_exports=$(extract_created_exports "$server_content")
 
-    # Extract events
-    local client_events=$(extract_events "$client_content")
-    local server_events=$(extract_events "$server_content")
-
-    # Extract exports
-    local client_exports=$(extract_exports "$client_content")
-    local server_exports=$(extract_exports "$server_content")
+    # Extract TRIGGERED events (events this script broadcasts)
+    local client_triggered=$(extract_triggered_events "$server_content") # Server triggers to client
+    local server_triggered=$(extract_server_triggered_events "$client_content") # Client triggers to server
 
     # Extract commands
     local all_commands=$(extract_commands "$client_content$server_content")
 
-    # Extract callbacks
+    # Extract callbacks with parameters
     local callbacks=$(extract_callbacks "$server_content")
 
     # Start generating markdown
@@ -105,7 +117,6 @@ generate_detailed_doc() {
 
 ### 1. Copy Files
 \`\`\`bash
-# Copy $repo folder to your resources directory
 cp -r $repo /path/to/resources/
 \`\`\`
 
@@ -116,15 +127,6 @@ ensure $repo
 
 DOCEOF
 
-    # Add dependencies if detected
-    if echo "$client_content$server_content" | grep -q "ox_inventory\|ox_lib"; then
-        cat >> "$DOCS_DIR/$repo.md" << DOCEOF
-### 3. Dependencies
-- ox_inventory or ox_lib (detected)
-
-DOCEOF
-    fi
-
     echo "---" >> "$DOCS_DIR/$repo.md"
     echo "" >> "$DOCS_DIR/$repo.md"
 
@@ -133,7 +135,6 @@ DOCEOF
     echo "" >> "$DOCS_DIR/$repo.md"
 
     if [ -n "$has_config" ]; then
-        # Try to get specific config files
         for cfg_name in "client_config.lua" "config.lua" "shared.lua"; do
             local cfg=$(gh api "repos/gfx-fivem/$repo/contents/config/$cfg_name" --jq '.content' 2>/dev/null | base64 -d 2>/dev/null)
             if [ -n "$cfg" ]; then
@@ -169,60 +170,87 @@ DOCEOF
     echo "---" >> "$DOCS_DIR/$repo.md"
     echo "" >> "$DOCS_DIR/$repo.md"
 
-    # Add Events section
-    echo "## Events" >> "$DOCS_DIR/$repo.md"
-    echo "" >> "$DOCS_DIR/$repo.md"
-
-    if [ -n "$client_events" ]; then
-        echo "### Client Events" >> "$DOCS_DIR/$repo.md"
-        echo "" >> "$DOCS_DIR/$repo.md"
-        echo "\`\`\`lua" >> "$DOCS_DIR/$repo.md"
-        echo "$client_events" | while read -r event; do
-            [ -n "$event" ] && echo "-- $event"
-            [ -n "$event" ] && echo "TriggerEvent('$event', ...)"
-            [ -n "$event" ] && echo ""
-        done >> "$DOCS_DIR/$repo.md"
-        echo "\`\`\`" >> "$DOCS_DIR/$repo.md"
-        echo "" >> "$DOCS_DIR/$repo.md"
-    fi
-
-    if [ -n "$server_events" ]; then
-        echo "### Server Events" >> "$DOCS_DIR/$repo.md"
-        echo "" >> "$DOCS_DIR/$repo.md"
-        echo "\`\`\`lua" >> "$DOCS_DIR/$repo.md"
-        echo "$server_events" | while read -r event; do
-            [ -n "$event" ] && echo "-- $event"
-            [ -n "$event" ] && echo "TriggerServerEvent('$event', ...)"
-            [ -n "$event" ] && echo ""
-        done >> "$DOCS_DIR/$repo.md"
-        echo "\`\`\`" >> "$DOCS_DIR/$repo.md"
-        echo "" >> "$DOCS_DIR/$repo.md"
-    fi
-
-    if [ -z "$client_events" ] && [ -z "$server_events" ]; then
-        echo "*No events found*" >> "$DOCS_DIR/$repo.md"
-        echo "" >> "$DOCS_DIR/$repo.md"
-    fi
-
-    echo "---" >> "$DOCS_DIR/$repo.md"
-    echo "" >> "$DOCS_DIR/$repo.md"
-
-    # Add Exports section
+    # Add Exports section - CREATED exports with parameters
     echo "## Exports" >> "$DOCS_DIR/$repo.md"
+    echo "" >> "$DOCS_DIR/$repo.md"
+    echo "Exports that other scripts can call:" >> "$DOCS_DIR/$repo.md"
     echo "" >> "$DOCS_DIR/$repo.md"
 
     local all_exports=$(echo -e "$client_exports\n$server_exports" | sort -u | grep -v '^$')
 
     if [ -n "$all_exports" ]; then
         echo "\`\`\`lua" >> "$DOCS_DIR/$repo.md"
-        echo "$all_exports" | while read -r exp; do
-            [ -n "$exp" ] && echo "exports['$repo']:$exp(...)"
+        echo "$all_exports" | while IFS='|' read -r func_name params; do
+            if [ -n "$func_name" ]; then
+                echo "-- Export: $func_name"
+                if [ -n "$params" ]; then
+                    echo "local result = exports['$repo']:$func_name($params)"
+                else
+                    echo "local result = exports['$repo']:$func_name()"
+                fi
+                echo ""
+            fi
         done >> "$DOCS_DIR/$repo.md"
         echo "\`\`\`" >> "$DOCS_DIR/$repo.md"
     else
         echo "*No exports found*" >> "$DOCS_DIR/$repo.md"
     fi
     echo "" >> "$DOCS_DIR/$repo.md"
+
+    echo "---" >> "$DOCS_DIR/$repo.md"
+    echo "" >> "$DOCS_DIR/$repo.md"
+
+    # Add Events section - TRIGGERED events (that others can listen to)
+    echo "## Events" >> "$DOCS_DIR/$repo.md"
+    echo "" >> "$DOCS_DIR/$repo.md"
+    echo "Events that this script triggers (you can listen to these):" >> "$DOCS_DIR/$repo.md"
+    echo "" >> "$DOCS_DIR/$repo.md"
+
+    # Filter to only show events from this script
+    local script_events=$(echo "$client_triggered" | grep -i "$repo" | sort -u)
+
+    if [ -n "$script_events" ]; then
+        echo "### Client Events" >> "$DOCS_DIR/$repo.md"
+        echo "" >> "$DOCS_DIR/$repo.md"
+        echo "\`\`\`lua" >> "$DOCS_DIR/$repo.md"
+        echo "$script_events" | while read -r event; do
+            if [ -n "$event" ]; then
+                echo "-- Listen to this event"
+                echo "RegisterNetEvent('$event')"
+                echo "AddEventHandler('$event', function(...)"
+                echo "    -- Handle event"
+                echo "end)"
+                echo ""
+            fi
+        done >> "$DOCS_DIR/$repo.md"
+        echo "\`\`\`" >> "$DOCS_DIR/$repo.md"
+        echo "" >> "$DOCS_DIR/$repo.md"
+    fi
+
+    local script_server_events=$(echo "$server_triggered" | grep -i "$repo" | sort -u)
+
+    if [ -n "$script_server_events" ]; then
+        echo "### Server Events" >> "$DOCS_DIR/$repo.md"
+        echo "" >> "$DOCS_DIR/$repo.md"
+        echo "\`\`\`lua" >> "$DOCS_DIR/$repo.md"
+        echo "$script_server_events" | while read -r event; do
+            if [ -n "$event" ]; then
+                echo "-- Listen to this event on server"
+                echo "RegisterNetEvent('$event')"
+                echo "AddEventHandler('$event', function(...)"
+                echo "    -- Handle event"
+                echo "end)"
+                echo ""
+            fi
+        done >> "$DOCS_DIR/$repo.md"
+        echo "\`\`\`" >> "$DOCS_DIR/$repo.md"
+        echo "" >> "$DOCS_DIR/$repo.md"
+    fi
+
+    if [ -z "$script_events" ] && [ -z "$script_server_events" ]; then
+        echo "*No public events found*" >> "$DOCS_DIR/$repo.md"
+        echo "" >> "$DOCS_DIR/$repo.md"
+    fi
 
     echo "---" >> "$DOCS_DIR/$repo.md"
     echo "" >> "$DOCS_DIR/$repo.md"
@@ -245,17 +273,25 @@ DOCEOF
     echo "---" >> "$DOCS_DIR/$repo.md"
     echo "" >> "$DOCS_DIR/$repo.md"
 
-    # Add Callbacks section
+    # Add Callbacks section with parameters
     if [ -n "$callbacks" ]; then
         echo "## Callbacks" >> "$DOCS_DIR/$repo.md"
         echo "" >> "$DOCS_DIR/$repo.md"
+        echo "Server callbacks you can trigger:" >> "$DOCS_DIR/$repo.md"
+        echo "" >> "$DOCS_DIR/$repo.md"
         echo "\`\`\`lua" >> "$DOCS_DIR/$repo.md"
-        echo "$callbacks" | while read -r cb; do
-            [ -n "$cb" ] && echo "-- $cb"
-            [ -n "$cb" ] && echo "TriggerCallback('$cb', function(result)"
-            [ -n "$cb" ] && echo "    -- handle result"
-            [ -n "$cb" ] && echo "end)"
-            [ -n "$cb" ] && echo ""
+        echo "$callbacks" | while IFS='|' read -r cb_name params; do
+            if [ -n "$cb_name" ]; then
+                echo "-- Callback: $cb_name"
+                if [ -n "$params" ]; then
+                    echo "TriggerCallback('$cb_name', function($params)"
+                else
+                    echo "TriggerCallback('$cb_name', function(result)"
+                fi
+                echo "    -- Handle result"
+                echo "end)"
+                echo ""
+            fi
         done >> "$DOCS_DIR/$repo.md"
         echo "\`\`\`" >> "$DOCS_DIR/$repo.md"
         echo "" >> "$DOCS_DIR/$repo.md"
@@ -276,7 +312,6 @@ DOCEOF
     echo "---" >> "$DOCS_DIR/$repo.md"
     echo "" >> "$DOCS_DIR/$repo.md"
 
-    # Add footer
     cat >> "$DOCS_DIR/$repo.md" << DOCEOF
 ## Source
 
@@ -287,7 +322,7 @@ DOCEOF
     echo "  Completed: $repo" >> "$LOG_FILE"
 }
 
-# Read scripts from file and process
+# Process all scripts
 count=0
 total=$(wc -l < /tmp/all_scripts.txt | tr -d ' ')
 
@@ -298,5 +333,4 @@ while IFS= read -r repo; do
     echo "Progress: $count/$total"
 done < /tmp/all_scripts.txt
 
-echo "Detailed documentation generation completed at $(date)" >> "$LOG_FILE"
 echo "DONE - Generated $count documentation files"

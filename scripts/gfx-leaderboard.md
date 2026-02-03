@@ -4,7 +4,6 @@
 
 ### 1. Copy Files
 ```bash
-# Copy gfx-leaderboard folder to your resources directory
 cp -r gfx-leaderboard /path/to/resources/
 ```
 
@@ -21,37 +20,19 @@ ensure gfx-leaderboard
 
 ---
 
-## Events
+## Exports
 
-### Client Events
+Exports that other scripts can call:
 
-```lua
--- leaderboard:changePed
-TriggerEvent('leaderboard:changePed', ...)
-
--- leaderboard:updateTextInfo
-TriggerEvent('leaderboard:updateTextInfo', ...)
-
-```
-
-### Server Events
-
-```lua
--- esx:playerLoaded
-TriggerServerEvent('esx:playerLoaded', ...)
-
-```
+*No exports found*
 
 ---
 
-## Exports
+## Events
 
-```lua
-exports['gfx-leaderboard']:fivem-appearance(...)
-exports['gfx-leaderboard']:gfx-lib(...)
-exports['gfx-leaderboard']:illenium-appearance(...)
-exports['gfx-leaderboard']:skinchanger(...)
-```
+Events that this script triggers (you can listen to these):
+
+*No public events found*
 
 ---
 
@@ -70,15 +51,17 @@ exports['gfx-leaderboard']:skinchanger(...)
 
 ## Callbacks
 
+Server callbacks you can trigger:
+
 ```lua
--- leaderboard:getList
-TriggerCallback('leaderboard:getList', function(result)
-    -- handle result
+-- Callback: leaderboard:getList", function(source, id, type
+TriggerCallback('leaderboard:getList", function(source, id, type', function(result)
+    -- Handle result
 end)
 
--- leaderboard:getPlayerSkin
-TriggerCallback('leaderboard:getPlayerSkin', function(result)
-    -- handle result
+-- Callback: leaderboard:getPlayerSkin", function(source, type
+TriggerCallback('leaderboard:getPlayerSkin", function(source, type', function(result)
+    -- Handle result
 end)
 
 ```
