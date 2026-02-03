@@ -1,10 +1,10 @@
 # Gfx Tebexshop
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-tebexshop klasörünü resources/ dizinine kopyalayın
+# Copy gfx-tebexshop folder to your resources directory
 cp -r gfx-tebexshop /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-tebexshop
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -42,10 +42,10 @@ exports['gfx-tebexshop']:oxmysql(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/givecoin` | - |
 | `/packagebought` | - |
 | `/tebexshop` | - |
@@ -104,15 +104,15 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-tebexshop
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

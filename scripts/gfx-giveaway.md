@@ -1,10 +1,10 @@
 # Gfx Giveaway
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-giveaway klasörünü resources/ dizinine kopyalayın
+# Copy gfx-giveaway folder to your resources directory
 cp -r gfx-giveaway /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-giveaway
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -67,28 +67,28 @@ TriggerServerEvent('QBCore:Server:OnPlayerLoaded', ...)
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/focus` | - |
 | `/giveaway` | - |
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-giveaway
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

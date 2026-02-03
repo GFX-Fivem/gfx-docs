@@ -1,10 +1,10 @@
 # Gfx Truthordare
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-truthordare klasörünü resources/ dizinine kopyalayın
+# Copy gfx-truthordare folder to your resources directory
 cp -r gfx-truthordare /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-truthordare
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -45,23 +45,23 @@ exports['gfx-truthordare']:qb-core(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/createtd` | - |
 | `/jointd` | - |
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-truthordare
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

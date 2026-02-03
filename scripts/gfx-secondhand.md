@@ -1,10 +1,10 @@
 # Gfx Secondhand
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-secondhand klasörünü resources/ dizinine kopyalayın
+# Copy gfx-secondhand folder to your resources directory
 cp -r gfx-secondhand /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-secondhand
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -78,21 +78,21 @@ exports['gfx-secondhand']:qb-target(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-secondhand
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

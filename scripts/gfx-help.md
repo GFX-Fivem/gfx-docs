@@ -1,10 +1,10 @@
 # Gfx Help
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-help klasörünü resources/ dizinine kopyalayın
+# Copy gfx-help folder to your resources directory
 cp -r gfx-help /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-help
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -38,24 +38,24 @@ TriggerEvent('gfx-help:updateTicket', ...)
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-help
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

@@ -1,10 +1,10 @@
 # Gfx Killfeed
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-killfeed klasörünü resources/ dizinine kopyalayın
+# Copy gfx-killfeed folder to your resources directory
 cp -r gfx-killfeed /path/to/resources/
 ```
 
@@ -13,12 +13,12 @@ cp -r gfx-killfeed /path/to/resources/
 ensure gfx-killfeed
 ```
 
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 ---
 
-## Konfigürasyon
+## Configuration
 
 ### client_config.lua
 
@@ -55,7 +55,7 @@ Config = {
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
@@ -76,23 +76,23 @@ exports['gfx-killfeed']:qs-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/boiler` | - |
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-killfeed
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

@@ -1,10 +1,10 @@
 # Gfx Crew
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-crew klasörünü resources/ dizinine kopyalayın
+# Copy gfx-crew folder to your resources directory
 cp -r gfx-crew /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-crew
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -78,9 +78,9 @@ exports['gfx-crew']:oxmysql(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
@@ -251,14 +251,14 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-crew
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

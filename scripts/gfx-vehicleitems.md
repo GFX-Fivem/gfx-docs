@@ -1,10 +1,10 @@
 # Gfx Vehicleitems
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-vehicleitems klasörünü resources/ dizinine kopyalayın
+# Copy gfx-vehicleitems folder to your resources directory
 cp -r gfx-vehicleitems /path/to/resources/
 ```
 
@@ -15,36 +15,36 @@ ensure gfx-vehicleitems
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
-
----
-
-## Özellikler
-
+*No commands found*
 
 ---
 
-## Kaynak
+## Features
+
+
+---
+
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-vehicleitems
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

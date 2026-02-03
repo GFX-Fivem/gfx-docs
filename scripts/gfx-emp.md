@@ -1,10 +1,10 @@
 # Gfx Emp
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-emp klasörünü resources/ dizinine kopyalayın
+# Copy gfx-emp folder to your resources directory
 cp -r gfx-emp /path/to/resources/
 ```
 
@@ -15,36 +15,36 @@ ensure gfx-emp
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
-
----
-
-## Özellikler
-
+*No commands found*
 
 ---
 
-## Kaynak
+## Features
+
+
+---
+
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-emp
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

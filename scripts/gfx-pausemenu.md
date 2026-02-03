@@ -1,10 +1,10 @@
 # Gfx Pausemenu
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-pausemenu klasörünü resources/ dizinine kopyalayın
+# Copy gfx-pausemenu folder to your resources directory
 cp -r gfx-pausemenu /path/to/resources/
 ```
 
@@ -15,15 +15,15 @@ ensure gfx-pausemenu
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
@@ -39,9 +39,9 @@ exports['gfx-pausemenu']:qb-core(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
@@ -57,14 +57,14 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-pausemenu
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

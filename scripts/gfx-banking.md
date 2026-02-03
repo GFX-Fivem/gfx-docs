@@ -1,10 +1,10 @@
 # Gfx Banking
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-banking klasörünü resources/ dizinine kopyalayın
+# Copy gfx-banking folder to your resources directory
 cp -r gfx-banking /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-banking
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -52,24 +52,24 @@ exports['gfx-banking']:qb-target(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/debugmoney` | - |
 | `/openbank` | - |
 | `/transfertonewbank` | - |
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-banking
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

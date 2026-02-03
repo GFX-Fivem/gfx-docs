@@ -1,10 +1,10 @@
 # Gfx Leaderboard
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-leaderboard klasörünü resources/ dizinine kopyalayın
+# Copy gfx-leaderboard folder to your resources directory
 cp -r gfx-leaderboard /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-leaderboard
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -55,10 +55,10 @@ exports['gfx-leaderboard']:skinchanger(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/checkleaderboard` | - |
 | `/givewep` | - |
 | `/leaderboard` | - |
@@ -85,14 +85,14 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-leaderboard
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

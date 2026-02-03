@@ -1,10 +1,10 @@
 # Gfx Pvphud
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-pvphud klasörünü resources/ dizinine kopyalayın
+# Copy gfx-pvphud folder to your resources directory
 cp -r gfx-pvphud /path/to/resources/
 ```
 
@@ -15,39 +15,39 @@ ensure gfx-pvphud
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/test:a` | - |
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-pvphud
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

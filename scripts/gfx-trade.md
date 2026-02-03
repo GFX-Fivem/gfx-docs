@@ -1,10 +1,10 @@
 # Gfx Trade
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-trade klasörünü resources/ dizinine kopyalayın
+# Copy gfx-trade folder to your resources directory
 cp -r gfx-trade /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-trade
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -69,10 +69,10 @@ exports['gfx-trade']:qb-core(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/getidentifier` | - |
 | `/trade` | - |
 | `/tradea` | - |
@@ -80,14 +80,14 @@ exports['gfx-trade']:qb-core(...)
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-trade
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

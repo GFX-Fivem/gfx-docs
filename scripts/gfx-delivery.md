@@ -1,10 +1,10 @@
 # Gfx Delivery
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-delivery klasörünü resources/ dizinine kopyalayın
+# Copy gfx-delivery folder to your resources directory
 cp -r gfx-delivery /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-delivery
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -69,20 +69,20 @@ exports['gfx-delivery']:qb-target(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-delivery
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

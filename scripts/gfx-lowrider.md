@@ -1,10 +1,10 @@
 # Gfx Lowrider
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-lowrider klasörünü resources/ dizinine kopyalayın
+# Copy gfx-lowrider folder to your resources directory
 cp -r gfx-lowrider /path/to/resources/
 ```
 
@@ -15,38 +15,38 @@ ensure gfx-lowrider
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-lowrider
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

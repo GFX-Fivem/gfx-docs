@@ -1,10 +1,10 @@
 # Gfx Pvpchat
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-pvpchat klasörünü resources/ dizinine kopyalayın
+# Copy gfx-pvpchat folder to your resources directory
 cp -r gfx-pvpchat /path/to/resources/
 ```
 
@@ -13,12 +13,12 @@ cp -r gfx-pvpchat /path/to/resources/
 ensure gfx-pvpchat
 ```
 
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 ---
 
-## Konfigürasyon
+## Configuration
 
 ### client_config.lua
 
@@ -118,10 +118,10 @@ exports['gfx-pvpchat']:qs-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/changeMode` | - |
 | `/chat` | - |
 | `/testseend` | - |
@@ -155,15 +155,15 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-pvpchat
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

@@ -1,10 +1,10 @@
 # Gfx Redzone
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-redzone klasörünü resources/ dizinine kopyalayın
+# Copy gfx-redzone folder to your resources directory
 cp -r gfx-redzone /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-redzone
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -52,22 +52,22 @@ exports['gfx-redzone']:gfx-points(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/redzone` | - |
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-redzone
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

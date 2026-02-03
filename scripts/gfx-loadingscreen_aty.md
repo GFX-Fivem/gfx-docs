@@ -1,10 +1,10 @@
 # Gfx Loadingscreen Aty
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-loadingscreen_aty klasörünü resources/ dizinine kopyalayın
+# Copy gfx-loadingscreen_aty folder to your resources directory
 cp -r gfx-loadingscreen_aty /path/to/resources/
 ```
 
@@ -15,36 +15,36 @@ ensure gfx-loadingscreen_aty
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
-
----
-
-## Özellikler
-
+*No commands found*
 
 ---
 
-## Kaynak
+## Features
+
+
+---
+
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-loadingscreen_aty
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

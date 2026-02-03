@@ -1,10 +1,10 @@
 # Gfx Vehicleshop
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-vehicleshop klasörünü resources/ dizinine kopyalayın
+# Copy gfx-vehicleshop folder to your resources directory
 cp -r gfx-vehicleshop /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-vehicleshop
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -63,20 +63,20 @@ exports['gfx-vehicleshop']:qb-core(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-vehicleshop
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

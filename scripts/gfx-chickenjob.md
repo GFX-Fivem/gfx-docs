@@ -1,10 +1,10 @@
 # Gfx Chickenjob
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-chickenjob klasörünü resources/ dizinine kopyalayın
+# Copy gfx-chickenjob folder to your resources directory
 cp -r gfx-chickenjob /path/to/resources/
 ```
 
@@ -15,15 +15,15 @@ ensure gfx-chickenjob
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
@@ -36,20 +36,20 @@ exports['gfx-chickenjob']:qb-core(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-chickenjob
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

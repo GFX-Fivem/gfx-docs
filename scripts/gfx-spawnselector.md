@@ -1,10 +1,10 @@
 # Gfx Spawnselector
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-spawnselector klasörünü resources/ dizinine kopyalayın
+# Copy gfx-spawnselector folder to your resources directory
 cp -r gfx-spawnselector /path/to/resources/
 ```
 
@@ -13,12 +13,12 @@ cp -r gfx-spawnselector /path/to/resources/
 ensure gfx-spawnselector
 ```
 
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 ---
 
-## Konfigürasyon
+## Configuration
 
 ### client_config.lua
 
@@ -95,7 +95,7 @@ Config = {
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
@@ -116,24 +116,24 @@ exports['gfx-spawnselector']:qs-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/boiler` | - |
 | `/spawnselector` | - |
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-spawnselector
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

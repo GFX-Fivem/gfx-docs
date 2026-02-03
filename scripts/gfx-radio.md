@@ -1,10 +1,10 @@
 # Gfx Radio
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-radio klasörünü resources/ dizinine kopyalayın
+# Copy gfx-radio folder to your resources directory
 cp -r gfx-radio /path/to/resources/
 ```
 
@@ -13,14 +13,14 @@ cp -r gfx-radio /path/to/resources/
 ensure gfx-radio
 ```
 
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -53,23 +53,23 @@ exports['gfx-radio']:qs-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/gfx-radio` | - |
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
-- ✅ Shared modül
+- ✅ Shared module
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-radio
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

@@ -1,10 +1,10 @@
 # Gfx Hitmarker
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-hitmarker klasörünü resources/ dizinine kopyalayın
+# Copy gfx-hitmarker folder to your resources directory
 cp -r gfx-hitmarker /path/to/resources/
 ```
 
@@ -15,36 +15,36 @@ ensure gfx-hitmarker
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
-
----
-
-## Özellikler
-
+*No commands found*
 
 ---
 
-## Kaynak
+## Features
+
+
+---
+
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-hitmarker
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

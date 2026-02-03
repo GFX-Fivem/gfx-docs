@@ -1,28 +1,27 @@
 # GFX Development
 
-GFX FiveM script koleksiyonu için resmi dokümantasyon.
+Official documentation for the GFX FiveM script collection.
 
-## Hakkında
+## About
 
-Bu dokümantasyon, GFX-Fivem organizasyonu altındaki tüm FiveM scriptlerini kapsar.
+This documentation covers all FiveM scripts under the GFX-Fivem organization.
 
-## İçerik
+## Contents
 
-- **76 Script** için detaylı dokümantasyon
-- Her script için:
-  - Kurulum rehberi
-  - Konfigürasyon ayarları
+- **76 Scripts** with detailed documentation
+- Each script includes:
+  - Installation guide
+  - Configuration settings
   - Client/Server Events
   - Exports
-  - Komutlar
+  - Commands
   - Callbacks
 
-## Organizasyon
+## Organization
 
 - **GitHub:** [GFX-Fivem](https://github.com/gfx-fivem)
 - **GitBook:** [GFX Development](https://gfx-fivem.gitbook.io/gfx-development/)
 
 ---
 
-*Bu dokümantasyon otomatik olarak kaynak kodlardan oluşturulmuştur.*
-
+*This documentation was automatically generated from source code.*

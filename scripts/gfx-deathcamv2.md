@@ -1,10 +1,10 @@
 # Gfx Deathcamv2
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-deathcamv2 klasörünü resources/ dizinine kopyalayın
+# Copy gfx-deathcamv2 folder to your resources directory
 cp -r gfx-deathcamv2 /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-deathcamv2
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -35,13 +35,13 @@ TriggerEvent('gameEventTriggered', ...)
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
@@ -57,14 +57,14 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-deathcamv2
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

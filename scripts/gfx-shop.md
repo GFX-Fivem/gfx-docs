@@ -1,10 +1,10 @@
 # Gfx Shop
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-shop klasörünü resources/ dizinine kopyalayın
+# Copy gfx-shop folder to your resources directory
 cp -r gfx-shop /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-shop
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -44,20 +44,20 @@ exports['gfx-shop']:gfx-base(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-shop
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

@@ -1,10 +1,10 @@
 # Gfx Attachment Remake
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-attachment-remake klasörünü resources/ dizinine kopyalayın
+# Copy gfx-attachment-remake folder to your resources directory
 cp -r gfx-attachment-remake /path/to/resources/
 ```
 
@@ -13,20 +13,20 @@ cp -r gfx-attachment-remake /path/to/resources/
 ensure gfx-attachment-remake
 ```
 
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
@@ -47,9 +47,9 @@ exports['gfx-attachment-remake']:qs-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
@@ -75,16 +75,16 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
-- ✅ Shared modül
+- ✅ Shared module
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-attachment-remake
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

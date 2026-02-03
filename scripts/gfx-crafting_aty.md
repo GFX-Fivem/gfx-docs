@@ -1,10 +1,10 @@
 # Gfx Crafting Aty
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-crafting_aty klasörünü resources/ dizinine kopyalayın
+# Copy gfx-crafting_aty folder to your resources directory
 cp -r gfx-crafting_aty /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-crafting_aty
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -57,23 +57,23 @@ exports['gfx-crafting_aty']:oxmysql(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/purchase_made_for_crafting` | - |
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-crafting_aty
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

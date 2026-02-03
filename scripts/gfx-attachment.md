@@ -1,10 +1,10 @@
 # Gfx Attachment
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-attachment klasörünü resources/ dizinine kopyalayın
+# Copy gfx-attachment folder to your resources directory
 cp -r gfx-attachment /path/to/resources/
 ```
 
@@ -13,14 +13,14 @@ cp -r gfx-attachment /path/to/resources/
 ensure gfx-attachment
 ```
 
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -54,10 +54,10 @@ exports['gfx-attachment']:qs-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/bench` | - |
 | `/removeattachments` | - |
 | `/setattachments` | - |
@@ -81,14 +81,14 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-attachment
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

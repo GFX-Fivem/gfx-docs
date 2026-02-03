@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# GFX Detailed Documentation Generator
+# GFX Detailed Documentation Generator (English)
 # Extracts events, exports, commands from source code
 
 DOCS_DIR="$HOME/gfx-docs/scripts"
@@ -10,31 +10,22 @@ echo "Starting detailed documentation generation at $(date)" > "$LOG_FILE"
 
 extract_events() {
     local content="$1"
-    local type="$2"  # client or server
-
-    # Extract RegisterNetEvent patterns
     echo "$content" | grep -oE "RegisterNetEvent\(['\"]([^'\"]+)" | sed "s/RegisterNetEvent(['\"]//g" | sort -u
 }
 
 extract_exports() {
     local content="$1"
-
-    # Extract exports patterns
     echo "$content" | grep -oE "exports\[['\"]([^'\"]+)" | sed "s/exports\[['\"]//g" | sort -u
     echo "$content" | grep -oE "exports\.[a-zA-Z_][a-zA-Z0-9_]*" | sed "s/exports\.//g" | sort -u
 }
 
 extract_commands() {
     local content="$1"
-
-    # Extract RegisterCommand patterns
     echo "$content" | grep -oE "RegisterCommand\(['\"]([^'\"]+)" | sed "s/RegisterCommand(['\"]//g" | sort -u
 }
 
 extract_callbacks() {
     local content="$1"
-
-    # Extract callback patterns
     echo "$content" | grep -oE "RegisterCallback\(['\"]([^'\"]+)" | sed "s/RegisterCallback(['\"]//g" | sort -u
     echo "$content" | grep -oE "TriggerCallback\(['\"]([^'\"]+)" | sed "s/TriggerCallback(['\"]//g" | sort -u
 }
@@ -92,15 +83,9 @@ generate_detailed_doc() {
         config_content=$(get_all_lua_content "$repo" "config")
     fi
 
-    # Get shared content
-    local shared_content=""
-    if [ -n "$has_shared" ]; then
-        shared_content=$(get_all_lua_content "$repo" "shared")
-    fi
-
     # Extract events
-    local client_events=$(extract_events "$client_content" "client")
-    local server_events=$(extract_events "$server_content" "server")
+    local client_events=$(extract_events "$client_content")
+    local server_events=$(extract_events "$server_content")
 
     # Extract exports
     local client_exports=$(extract_exports "$client_content")
@@ -116,11 +101,11 @@ generate_detailed_doc() {
     cat > "$DOCS_DIR/$repo.md" << DOCEOF
 # $title
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 \`\`\`bash
-# $repo klasörünü resources/ dizinine kopyalayın
+# Copy $repo folder to your resources directory
 cp -r $repo /path/to/resources/
 \`\`\`
 
@@ -134,8 +119,8 @@ DOCEOF
     # Add dependencies if detected
     if echo "$client_content$server_content" | grep -q "ox_inventory\|ox_lib"; then
         cat >> "$DOCS_DIR/$repo.md" << DOCEOF
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 DOCEOF
     fi
@@ -144,10 +129,10 @@ DOCEOF
     echo "" >> "$DOCS_DIR/$repo.md"
 
     # Add config section
-    echo "## Konfigürasyon" >> "$DOCS_DIR/$repo.md"
+    echo "## Configuration" >> "$DOCS_DIR/$repo.md"
     echo "" >> "$DOCS_DIR/$repo.md"
 
-    if [ -n "$config_content" ]; then
+    if [ -n "$has_config" ]; then
         # Try to get specific config files
         for cfg_name in "client_config.lua" "config.lua" "shared.lua"; do
             local cfg=$(gh api "repos/gfx-fivem/$repo/contents/config/$cfg_name" --jq '.content' 2>/dev/null | base64 -d 2>/dev/null)
@@ -177,7 +162,7 @@ DOCEOF
             fi
         done
     else
-        echo "*Konfigürasyon dosyası bulunamadı*" >> "$DOCS_DIR/$repo.md"
+        echo "*No configuration file found*" >> "$DOCS_DIR/$repo.md"
         echo "" >> "$DOCS_DIR/$repo.md"
     fi
 
@@ -215,7 +200,7 @@ DOCEOF
     fi
 
     if [ -z "$client_events" ] && [ -z "$server_events" ]; then
-        echo "*Event bulunamadı*" >> "$DOCS_DIR/$repo.md"
+        echo "*No events found*" >> "$DOCS_DIR/$repo.md"
         echo "" >> "$DOCS_DIR/$repo.md"
     fi
 
@@ -235,7 +220,7 @@ DOCEOF
         done >> "$DOCS_DIR/$repo.md"
         echo "\`\`\`" >> "$DOCS_DIR/$repo.md"
     else
-        echo "*Export bulunamadı*" >> "$DOCS_DIR/$repo.md"
+        echo "*No exports found*" >> "$DOCS_DIR/$repo.md"
     fi
     echo "" >> "$DOCS_DIR/$repo.md"
 
@@ -243,17 +228,17 @@ DOCEOF
     echo "" >> "$DOCS_DIR/$repo.md"
 
     # Add Commands section
-    echo "## Komutlar" >> "$DOCS_DIR/$repo.md"
+    echo "## Commands" >> "$DOCS_DIR/$repo.md"
     echo "" >> "$DOCS_DIR/$repo.md"
 
     if [ -n "$all_commands" ]; then
-        echo "| Komut | Açıklama |" >> "$DOCS_DIR/$repo.md"
-        echo "|-------|----------|" >> "$DOCS_DIR/$repo.md"
+        echo "| Command | Description |" >> "$DOCS_DIR/$repo.md"
+        echo "|---------|-------------|" >> "$DOCS_DIR/$repo.md"
         echo "$all_commands" | while read -r cmd; do
             [ -n "$cmd" ] && echo "| \`/$cmd\` | - |"
         done >> "$DOCS_DIR/$repo.md"
     else
-        echo "*Komut bulunamadı*" >> "$DOCS_DIR/$repo.md"
+        echo "*No commands found*" >> "$DOCS_DIR/$repo.md"
     fi
     echo "" >> "$DOCS_DIR/$repo.md"
 
@@ -279,13 +264,13 @@ DOCEOF
     fi
 
     # Add Features section
-    echo "## Özellikler" >> "$DOCS_DIR/$repo.md"
+    echo "## Features" >> "$DOCS_DIR/$repo.md"
     echo "" >> "$DOCS_DIR/$repo.md"
 
-    [ -n "$has_web" ] && echo "- ✅ NUI Arayüzü" >> "$DOCS_DIR/$repo.md"
+    [ -n "$has_web" ] && echo "- ✅ NUI Interface" >> "$DOCS_DIR/$repo.md"
     [ -n "$has_client" ] && echo "- ✅ Client-side" >> "$DOCS_DIR/$repo.md"
     [ -n "$has_server" ] && echo "- ✅ Server-side" >> "$DOCS_DIR/$repo.md"
-    [ -n "$has_shared" ] && echo "- ✅ Shared modül" >> "$DOCS_DIR/$repo.md"
+    [ -n "$has_shared" ] && echo "- ✅ Shared module" >> "$DOCS_DIR/$repo.md"
 
     echo "" >> "$DOCS_DIR/$repo.md"
     echo "---" >> "$DOCS_DIR/$repo.md"
@@ -293,10 +278,10 @@ DOCEOF
 
     # Add footer
     cat >> "$DOCS_DIR/$repo.md" << DOCEOF
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/$repo
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)
 DOCEOF
 
     echo "  Completed: $repo" >> "$LOG_FILE"
@@ -304,14 +289,14 @@ DOCEOF
 
 # Read scripts from file and process
 count=0
-total=$(wc -l < /tmp/missing_scripts.txt | tr -d ' ')
+total=$(wc -l < /tmp/all_scripts.txt | tr -d ' ')
 
 while IFS= read -r repo; do
     [ -z "$repo" ] && continue
     generate_detailed_doc "$repo"
     count=$((count + 1))
     echo "Progress: $count/$total"
-done < /tmp/missing_scripts.txt
+done < /tmp/all_scripts.txt
 
 echo "Detailed documentation generation completed at $(date)" >> "$LOG_FILE"
 echo "DONE - Generated $count documentation files"

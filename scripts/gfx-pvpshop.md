@@ -1,10 +1,10 @@
 # Gfx Pvpshop
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-pvpshop klasörünü resources/ dizinine kopyalayın
+# Copy gfx-pvpshop folder to your resources directory
 cp -r gfx-pvpshop /path/to/resources/
 ```
 
@@ -13,20 +13,20 @@ cp -r gfx-pvpshop /path/to/resources/
 ensure gfx-pvpshop
 ```
 
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
@@ -48,9 +48,9 @@ exports['gfx-pvpshop']:qs-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
@@ -81,16 +81,16 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
-- ✅ Shared modül
+- ✅ Shared module
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-pvpshop
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

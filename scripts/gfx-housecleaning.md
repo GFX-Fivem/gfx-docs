@@ -1,10 +1,10 @@
 # Gfx Housecleaning
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-housecleaning klasörünü resources/ dizinine kopyalayın
+# Copy gfx-housecleaning folder to your resources directory
 cp -r gfx-housecleaning /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-housecleaning
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -50,27 +50,27 @@ TriggerEvent('aty_housecleaning:startMission', ...)
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/acceptinvite` | - |
 | `/myinvites` | - |
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-housecleaning
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

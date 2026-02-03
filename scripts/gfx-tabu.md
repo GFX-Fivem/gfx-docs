@@ -1,10 +1,10 @@
 # Gfx Tabu
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-tabu klasörünü resources/ dizinine kopyalayın
+# Copy gfx-tabu folder to your resources directory
 cp -r gfx-tabu /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-tabu
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -61,24 +61,24 @@ exports['gfx-tabu']:qb-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/createtabu` | - |
 | `/jointabu` | - |
 | `/opentabu` | - |
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-tabu
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

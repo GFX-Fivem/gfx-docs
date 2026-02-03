@@ -1,10 +1,10 @@
 # Gfx Kit
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-kit klasörünü resources/ dizinine kopyalayın
+# Copy gfx-kit folder to your resources directory
 cp -r gfx-kit /path/to/resources/
 ```
 
@@ -15,36 +15,36 @@ ensure gfx-kit
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
-
----
-
-## Özellikler
-
+*No commands found*
 
 ---
 
-## Kaynak
+## Features
+
+
+---
+
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-kit
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

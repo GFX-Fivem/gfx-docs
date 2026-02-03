@@ -1,10 +1,10 @@
 # Gfx Busjob
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-busjob klasörünü resources/ dizinine kopyalayın
+# Copy gfx-busjob folder to your resources directory
 cp -r gfx-busjob /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-busjob
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -54,20 +54,20 @@ exports['gfx-busjob']:qb-target(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-busjob
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

@@ -1,10 +1,10 @@
 # Gfx Squad Remake
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-squad-remake klasörünü resources/ dizinine kopyalayın
+# Copy gfx-squad-remake folder to your resources directory
 cp -r gfx-squad-remake /path/to/resources/
 ```
 
@@ -13,12 +13,12 @@ cp -r gfx-squad-remake /path/to/resources/
 ensure gfx-squad-remake
 ```
 
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 ---
 
-## Konfigürasyon
+## Configuration
 
 ### client_config.lua
 
@@ -112,10 +112,10 @@ exports['gfx-squad-remake']:qs-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/cm` | - |
 | `/squad` | - |
 
@@ -213,15 +213,15 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-squad-remake
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

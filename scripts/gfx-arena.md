@@ -1,10 +1,10 @@
 # Gfx Arena
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-arena klasörünü resources/ dizinine kopyalayın
+# Copy gfx-arena folder to your resources directory
 cp -r gfx-arena /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-arena
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -74,10 +74,10 @@ exports['gfx-arena']:qb-core(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/cancelspec` | - |
 | `/getlobbies` | - |
 | `/givew` | - |
@@ -123,14 +123,14 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-arena
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

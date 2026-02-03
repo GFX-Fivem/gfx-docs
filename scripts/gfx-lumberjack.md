@@ -1,10 +1,10 @@
 # Gfx Lumberjack
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-lumberjack klasörünü resources/ dizinine kopyalayın
+# Copy gfx-lumberjack folder to your resources directory
 cp -r gfx-lumberjack /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-lumberjack
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -61,20 +61,20 @@ exports['gfx-lumberjack']:qb-core(...)
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
+*No commands found*
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-lumberjack
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

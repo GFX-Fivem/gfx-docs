@@ -1,10 +1,10 @@
 # Gfx Hacker
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-hacker klasörünü resources/ dizinine kopyalayın
+# Copy gfx-hacker folder to your resources directory
 cp -r gfx-hacker /path/to/resources/
 ```
 
@@ -13,12 +13,12 @@ cp -r gfx-hacker /path/to/resources/
 ensure gfx-hacker
 ```
 
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 ---
 
-## Konfigürasyon
+## Configuration
 
 ### client_config.lua
 
@@ -60,7 +60,7 @@ Config = {
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
@@ -81,23 +81,23 @@ exports['gfx-hacker']:qs-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/boiler` | - |
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-hacker
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

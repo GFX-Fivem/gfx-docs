@@ -1,10 +1,10 @@
 # Gfx Loadingscreen Aty 2
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-loadingscreen_aty-2 klasörünü resources/ dizinine kopyalayın
+# Copy gfx-loadingscreen_aty-2 folder to your resources directory
 cp -r gfx-loadingscreen_aty-2 /path/to/resources/
 ```
 
@@ -15,37 +15,37 @@ ensure gfx-loadingscreen_aty-2
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
 ## Exports
 
-*Export bulunamadı*
+*No exports found*
 
 ---
 
-## Komutlar
+## Commands
 
-*Komut bulunamadı*
-
----
-
-## Özellikler
-
-- ✅ NUI Arayüzü
+*No commands found*
 
 ---
 
-## Kaynak
+## Features
+
+- ✅ NUI Interface
+
+---
+
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-loadingscreen_aty-2
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

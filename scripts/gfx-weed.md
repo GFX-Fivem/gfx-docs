@@ -1,10 +1,10 @@
 # Gfx Weed
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-weed klasörünü resources/ dizinine kopyalayın
+# Copy gfx-weed folder to your resources directory
 cp -r gfx-weed /path/to/resources/
 ```
 
@@ -13,12 +13,12 @@ cp -r gfx-weed /path/to/resources/
 ensure gfx-weed
 ```
 
-### 3. Bağımlılıklar
-- ox_inventory veya ox_lib (tespit edildi)
+### 3. Dependencies
+- ox_inventory or ox_lib (detected)
 
 ---
 
-## Konfigürasyon
+## Configuration
 
 ### client_config.lua
 
@@ -273,10 +273,10 @@ exports['gfx-weed']:qs-inventory(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/cancelsell` | - |
 | `/clearWeeds` | - |
 | `/dbgweed` | - |
@@ -363,15 +363,15 @@ end)
 
 ---
 
-## Özellikler
+## Features
 
-- ✅ NUI Arayüzü
+- ✅ NUI Interface
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-weed
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

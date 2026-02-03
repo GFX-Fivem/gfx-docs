@@ -1,10 +1,10 @@
 # Gfx Chat
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-chat klasörünü resources/ dizinine kopyalayın
+# Copy gfx-chat folder to your resources directory
 cp -r gfx-chat /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-chat
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -47,23 +47,23 @@ exports['gfx-chat']:gfx-base(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/changechatmode` | - |
 | `/clear` | - |
 | `/openchat` | - |
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-chat
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

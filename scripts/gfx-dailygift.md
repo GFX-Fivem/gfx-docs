@@ -1,10 +1,10 @@
 # Gfx Dailygift
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-dailygift klasörünü resources/ dizinine kopyalayın
+# Copy gfx-dailygift folder to your resources directory
 cp -r gfx-dailygift /path/to/resources/
 ```
 
@@ -15,9 +15,9 @@ ensure gfx-dailygift
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
@@ -57,23 +57,23 @@ exports['gfx-dailygift']:ghmattimysql(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/createDailyData` | - |
 | `/resetdaily` | - |
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 - ✅ Server-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-dailygift
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)

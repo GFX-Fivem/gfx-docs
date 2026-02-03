@@ -1,10 +1,10 @@
 # Gfx Autopilot
 
-## Kurulum
+## Installation
 
-### 1. Dosyaları Kopyala
+### 1. Copy Files
 ```bash
-# gfx-autopilot klasörünü resources/ dizinine kopyalayın
+# Copy gfx-autopilot folder to your resources directory
 cp -r gfx-autopilot /path/to/resources/
 ```
 
@@ -15,15 +15,15 @@ ensure gfx-autopilot
 
 ---
 
-## Konfigürasyon
+## Configuration
 
-*Konfigürasyon dosyası bulunamadı*
+*No configuration file found*
 
 ---
 
 ## Events
 
-*Event bulunamadı*
+*No events found*
 
 ---
 
@@ -36,21 +36,21 @@ exports['gfx-autopilot']:qb-core(...)
 
 ---
 
-## Komutlar
+## Commands
 
-| Komut | Açıklama |
-|-------|----------|
+| Command | Description |
+|---------|-------------|
 | `/comehere` | - |
 
 ---
 
-## Özellikler
+## Features
 
 - ✅ Client-side
 
 ---
 
-## Kaynak
+## Source
 
 - **GitHub:** https://github.com/gfx-fivem/gfx-autopilot
-- **Organizasyon:** [GFX-Fivem](https://github.com/gfx-fivem)
+- **Organization:** [GFX-Fivem](https://github.com/gfx-fivem)
