@@ -83,16 +83,17 @@ end)
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: gfx-evidence:getPreviousAnalyzes', function(
-TriggerCallback('gfx-evidence:getPreviousAnalyzes', function(', function(result)
+-- Callback: gfx-evidence:AddPreviousAnalyze
+TriggerCallback('gfx-evidence:AddPreviousAnalyze', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: gfx-evidence:AddPreviousAnalyze', function(source, data
-TriggerCallback('gfx-evidence:AddPreviousAnalyze', function(source, data', function(result)
+-- Callback: gfx-evidence:getPreviousAnalyzes
+TriggerCallback('gfx-evidence:getPreviousAnalyzes', function(result)
     -- Handle result
 end)
 

@@ -44,13 +44,14 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: getInfo", function(source, isFirst
-TriggerCallback('getInfo", function(source, isFirst', function(result)
+-- Callback: getInfo
+TriggerCallback('getInfo', function(result)
+    -- Parameters to send:  isFirst
     -- Handle result
-end)
+end,  isFirst)
 
 ```
 

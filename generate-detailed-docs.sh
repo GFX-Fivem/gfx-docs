@@ -43,10 +43,8 @@ extract_commands() {
 extract_callbacks() {
     local content="$1"
     # Extract RegisterCallback with function parameters
-    echo "$content" | grep -oE "RegisterCallback\(['\"]([^'\"]+)['\"],\s*function\s*\(([^)]*)\)" | \
-        sed "s/RegisterCallback(['\"]//g" | \
-        sed "s/['\"],\s*function\s*(/|/g" | \
-        sed "s/)$//g"
+    # Pattern: RegisterCallback('name', function(source, param1, param2)
+    echo "$content" | sed -n "s/.*RegisterCallback(['\"]\\([^'\"]*\\)['\"],.*function(\\([^)]*\\)).*/\\1|\\2/p" | sort -u
 }
 
 get_all_lua_content() {
@@ -277,19 +275,24 @@ DOCEOF
     if [ -n "$callbacks" ]; then
         echo "## Callbacks" >> "$DOCS_DIR/$repo.md"
         echo "" >> "$DOCS_DIR/$repo.md"
-        echo "Server callbacks you can trigger:" >> "$DOCS_DIR/$repo.md"
+        echo "Server callbacks you can trigger from client:" >> "$DOCS_DIR/$repo.md"
         echo "" >> "$DOCS_DIR/$repo.md"
         echo "\`\`\`lua" >> "$DOCS_DIR/$repo.md"
         echo "$callbacks" | while IFS='|' read -r cb_name params; do
             if [ -n "$cb_name" ]; then
+                # Remove 'source' from params (it's internal to server)
+                local call_params=$(echo "$params" | sed 's/source,\s*//g' | sed 's/source//g' | sed 's/^,\s*//g' | sed 's/,\s*$//g')
                 echo "-- Callback: $cb_name"
-                if [ -n "$params" ]; then
-                    echo "TriggerCallback('$cb_name', function($params)"
+                if [ -n "$call_params" ]; then
+                    echo "TriggerCallback('$cb_name', function(result)"
+                    echo "    -- Parameters to send: $call_params"
+                    echo "    -- Handle result"
+                    echo "end, $call_params)"
                 else
                     echo "TriggerCallback('$cb_name', function(result)"
+                    echo "    -- Handle result"
+                    echo "end)"
                 fi
-                echo "    -- Handle result"
-                echo "end)"
                 echo ""
             fi
         done >> "$DOCS_DIR/$repo.md"

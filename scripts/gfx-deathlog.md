@@ -49,13 +49,14 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: getIdent', function(source, targetId
-TriggerCallback('getIdent', function(source, targetId', function(result)
+-- Callback: getIdent
+TriggerCallback('getIdent', function(result)
+    -- Parameters to send:  targetId
     -- Handle result
-end)
+end,  targetId)
 
 ```
 

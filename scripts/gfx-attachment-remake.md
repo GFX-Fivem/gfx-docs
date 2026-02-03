@@ -44,28 +44,25 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: getAttachments", function(source, weaponName
-TriggerCallback('getAttachments", function(source, weaponName', function(result)
+-- Callback: getAttachments
+TriggerCallback('getAttachments', function(result)
+    -- Parameters to send:  weaponName
+    -- Handle result
+end,  weaponName)
+
+-- Callback: getWeapons
+TriggerCallback('getWeapons', function(result)
     -- Handle result
 end)
 
--- Callback: getAttachments", function(source, weaponName
-TriggerCallback('getAttachments", function(source, weaponName', function(result)
+-- Callback: saveWeapon
+TriggerCallback('saveWeapon', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
-
--- Callback: getWeapons", function(source
-TriggerCallback('getWeapons", function(source', function(result)
-    -- Handle result
-end)
-
--- Callback: saveWeapon", function(source, data
-TriggerCallback('saveWeapon", function(source, data', function(result)
-    -- Handle result
-end)
+end,  data)
 
 ```
 

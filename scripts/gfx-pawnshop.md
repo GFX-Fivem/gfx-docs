@@ -44,33 +44,37 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: SelledItem", function(source, itemIndex, shopIndex
-TriggerCallback('SelledItem", function(source, itemIndex, shopIndex', function(result)
+-- Callback: GetShopDataForAll
+TriggerCallback('GetShopDataForAll', function(result)
+    -- Parameters to send:  index
+    -- Handle result
+end,  index)
+
+-- Callback: GetShopDataForTrifles
+TriggerCallback('GetShopDataForTrifles', function(result)
+    -- Parameters to send:  index
+    -- Handle result
+end,  index)
+
+-- Callback: GetUserDataForNpc
+TriggerCallback('GetUserDataForNpc', function(result)
     -- Handle result
 end)
 
--- Callback: ItemEdit", function(source, itemIndex, shopIndex, selectType
-TriggerCallback('ItemEdit", function(source, itemIndex, shopIndex, selectType', function(result)
+-- Callback: ItemEdit
+TriggerCallback('ItemEdit', function(result)
+    -- Parameters to send:  itemIndex, shopIndex, selectType
     -- Handle result
-end)
+end,  itemIndex, shopIndex, selectType)
 
--- Callback: GetUserDataForNpc", function(source
-TriggerCallback('GetUserDataForNpc", function(source', function(result)
+-- Callback: SelledItem
+TriggerCallback('SelledItem', function(result)
+    -- Parameters to send:  itemIndex, shopIndex
     -- Handle result
-end)
-
--- Callback: GetShopDataForTrifles", function(source, index
-TriggerCallback('GetShopDataForTrifles", function(source, index', function(result)
-    -- Handle result
-end)
-
--- Callback: GetShopDataForAll", function(source, index
-TriggerCallback('GetShopDataForAll", function(source, index', function(result)
-    -- Handle result
-end)
+end,  itemIndex, shopIndex)
 
 ```
 

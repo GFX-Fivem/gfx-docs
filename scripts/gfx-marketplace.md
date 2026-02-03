@@ -44,43 +44,50 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: gfx-marketplace:fetchItems", function(source, itemName
-TriggerCallback('gfx-marketplace:fetchItems", function(source, itemName', function(result)
+-- Callback: gfx-marketplace:buyItem
+TriggerCallback('gfx-marketplace:buyItem', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: gfx-marketplace:getCreateOfferPage", function(source, itemName
-TriggerCallback('gfx-marketplace:getCreateOfferPage", function(source, itemName', function(result)
+-- Callback: gfx-marketplace:claim
+TriggerCallback('gfx-marketplace:claim', function(result)
+    -- Parameters to send: data
     -- Handle result
-end)
+end, data)
 
--- Callback: gfx-marketplace:getMyOffers", function(source, itemName
-TriggerCallback('gfx-marketplace:getMyOffers", function(source, itemName', function(result)
+-- Callback: gfx-marketplace:createOffer
+TriggerCallback('gfx-marketplace:createOffer', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: gfx-marketplace:deleteOffer", function(source, data
-TriggerCallback('gfx-marketplace:deleteOffer", function(source, data', function(result)
+-- Callback: gfx-marketplace:deleteOffer
+TriggerCallback('gfx-marketplace:deleteOffer', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: gfx-marketplace:createOffer", function(source, data
-TriggerCallback('gfx-marketplace:createOffer", function(source, data', function(result)
+-- Callback: gfx-marketplace:fetchItems
+TriggerCallback('gfx-marketplace:fetchItems', function(result)
+    -- Parameters to send:  itemName
     -- Handle result
-end)
+end,  itemName)
 
--- Callback: gfx-marketplace:buyItem", function(source, data
-TriggerCallback('gfx-marketplace:buyItem", function(source, data', function(result)
+-- Callback: gfx-marketplace:getCreateOfferPage
+TriggerCallback('gfx-marketplace:getCreateOfferPage', function(result)
+    -- Parameters to send:  itemName
     -- Handle result
-end)
+end,  itemName)
 
--- Callback: gfx-marketplace:claim", function(source,data
-TriggerCallback('gfx-marketplace:claim", function(source,data', function(result)
+-- Callback: gfx-marketplace:getMyOffers
+TriggerCallback('gfx-marketplace:getMyOffers', function(result)
+    -- Parameters to send:  itemName
     -- Handle result
-end)
+end,  itemName)
 
 ```
 

@@ -86,98 +86,108 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: removeInvite', function(source, id
-TriggerCallback('removeInvite', function(source, id', function(result)
+-- Callback: checkSquadName
+TriggerCallback('checkSquadName', function(result)
+    -- Parameters to send:  data
+    -- Handle result
+end,  data)
+
+-- Callback: createSquad
+TriggerCallback('createSquad', function(result)
+    -- Parameters to send:  data
+    -- Handle result
+end,  data)
+
+-- Callback: deleteSquad
+TriggerCallback('deleteSquad', function(result)
+    -- Parameters to send:  data
+    -- Handle result
+end,  data)
+
+-- Callback: getInvites
+TriggerCallback('getInvites', function(result)
+    -- Parameters to send:  data
+    -- Handle result
+end,  data)
+
+-- Callback: getMembers
+TriggerCallback('getMembers', function(result)
+    -- Parameters to send:  data
+    -- Handle result
+end,  data)
+
+-- Callback: getMessages
+TriggerCallback('getMessages', function(result)
+    -- Parameters to send:  data
+    -- Handle result
+end,  data)
+
+-- Callback: getPlayers
+TriggerCallback('getPlayers', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-crew:getMemberCoords', function(source, member
-TriggerCallback('gfx-crew:getMemberCoords', function(source, member', function(result)
+-- Callback: getSquads
+TriggerCallback('getSquads', function(result)
+    -- Parameters to send:  data
+    -- Handle result
+end,  data)
+
+-- Callback: getSquadSettings
+TriggerCallback('getSquadSettings', function(result)
     -- Handle result
 end)
 
--- Callback: getInvites', function(source, data
-TriggerCallback('getInvites', function(source, data', function(result)
+-- Callback: gfx-crew:getMemberCoords
+TriggerCallback('gfx-crew:getMemberCoords', function(result)
+    -- Parameters to send:  member
     -- Handle result
-end)
+end,  member)
 
--- Callback: inviteMember', function(source, data
-TriggerCallback('inviteMember', function(source, data', function(result)
+-- Callback: inviteMember
+TriggerCallback('inviteMember', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: checkSquadName", function(source, data
-TriggerCallback('checkSquadName", function(source, data', function(result)
+-- Callback: joinSquad
+TriggerCallback('joinSquad', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: getSquads", function(source, data
-TriggerCallback('getSquads", function(source, data', function(result)
+-- Callback: kickMember
+TriggerCallback('kickMember', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: createSquad", function(source, data
-TriggerCallback('createSquad", function(source, data', function(result)
+-- Callback: leaveSquad
+TriggerCallback('leaveSquad', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: sendMessage', function(source, data
-TriggerCallback('sendMessage', function(source, data', function(result)
+-- Callback: removeInvite
+TriggerCallback('removeInvite', function(result)
+    -- Parameters to send:  id
     -- Handle result
-end)
+end,  id)
 
--- Callback: getMessages', function(source, data
-TriggerCallback('getMessages', function(source, data', function(result)
+-- Callback: sendMessage
+TriggerCallback('sendMessage', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: getMembers", function(source, data
-TriggerCallback('getMembers", function(source, data', function(result)
+-- Callback: updateSquadSettings
+TriggerCallback('updateSquadSettings', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
-
--- Callback: joinSquad", function(source, data
-TriggerCallback('joinSquad", function(source, data', function(result)
-    -- Handle result
-end)
-
--- Callback: leaveSquad", function(source, data
-TriggerCallback('leaveSquad", function(source, data', function(result)
-    -- Handle result
-end)
-
--- Callback: deleteSquad", function(source, data
-TriggerCallback('deleteSquad", function(source, data', function(result)
-    -- Handle result
-end)
-
--- Callback: getSquadSettings", function(source
-TriggerCallback('getSquadSettings", function(source', function(result)
-    -- Handle result
-end)
-
--- Callback: updateSquadSettings", function(source, data
-TriggerCallback('updateSquadSettings", function(source, data', function(result)
-    -- Handle result
-end)
-
--- Callback: getPlayers", function(source
-TriggerCallback('getPlayers", function(source', function(result)
-    -- Handle result
-end)
-
--- Callback: kickMember', function(source, data
-TriggerCallback('kickMember', function(source, data', function(result)
-    -- Handle result
-end)
-
--- Callback: getSquadSettings', function(source
-TriggerCallback('getSquadSettings', function(source', function(result)
-    -- Handle result
-end)
+end,  data)
 
 ```
 

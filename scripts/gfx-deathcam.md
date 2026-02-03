@@ -53,13 +53,14 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: getPlayerPP", function(source, id
-TriggerCallback('getPlayerPP", function(source, id', function(result)
+-- Callback: getPlayerPP
+TriggerCallback('getPlayerPP', function(result)
+    -- Parameters to send:  id
     -- Handle result
-end)
+end,  id)
 
 ```
 

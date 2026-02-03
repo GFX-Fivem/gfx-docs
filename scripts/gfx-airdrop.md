@@ -91,26 +91,23 @@ end)
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: gfx-airdrop:server:GetAirDrops', function (source
-TriggerCallback('gfx-airdrop:server:GetAirDrops', function (source', function(result)
+-- Callback: gfx-airdrop:server:CreateAirDrop
+TriggerCallback('gfx-airdrop:server:CreateAirDrop', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: gfx-airdrop:server:GetAirDropItems', function(
-TriggerCallback('gfx-airdrop:server:GetAirDropItems', function(', function(result)
+-- Callback: gfx-airdrop:server:DeleteAirDrop
+TriggerCallback('gfx-airdrop:server:DeleteAirDrop', function(result)
+    -- Parameters to send:  id
     -- Handle result
-end)
+end,  id)
 
--- Callback: gfx-airdrop:server:CreateAirDrop', function(source, data
-TriggerCallback('gfx-airdrop:server:CreateAirDrop', function(source, data', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-airdrop:server:DeleteAirDrop', function(source, id
-TriggerCallback('gfx-airdrop:server:DeleteAirDrop', function(source, id', function(result)
+-- Callback: gfx-airdrop:server:GetAirDropItems
+TriggerCallback('gfx-airdrop:server:GetAirDropItems', function(result)
     -- Handle result
 end)
 

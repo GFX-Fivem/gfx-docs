@@ -70,11 +70,11 @@ end)
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: gfx:server:getInfos", function(source
-TriggerCallback('gfx:server:getInfos", function(source', function(result)
+-- Callback: gfx:server:getInfos
+TriggerCallback('gfx:server:getInfos', function(result)
     -- Handle result
 end)
 

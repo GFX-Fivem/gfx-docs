@@ -44,28 +44,31 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: getMoney", function(source
-TriggerCallback('getMoney", function(source', function(result)
+-- Callback: buyOrSell
+TriggerCallback('buyOrSell', function(result)
+    -- Parameters to send:  data, ActiveShop
+    -- Handle result
+end,  data, ActiveShop)
+
+-- Callback: getItems
+TriggerCallback('getItems', function(result)
+    -- Parameters to send:  k
+    -- Handle result
+end,  k)
+
+-- Callback: getMoney
+TriggerCallback('getMoney', function(result)
     -- Handle result
 end)
 
--- Callback: getItems", function(source, k
-TriggerCallback('getItems", function(source, k', function(result)
+-- Callback: sellAll
+TriggerCallback('sellAll', function(result)
+    -- Parameters to send:  ActiveShop
     -- Handle result
-end)
-
--- Callback: sellAll', function(source, ActiveShop
-TriggerCallback('sellAll', function(source, ActiveShop', function(result)
-    -- Handle result
-end)
-
--- Callback: buyOrSell", function(source, data, ActiveShop
-TriggerCallback('buyOrSell", function(source, data, ActiveShop', function(result)
-    -- Handle result
-end)
+end,  ActiveShop)
 
 ```
 

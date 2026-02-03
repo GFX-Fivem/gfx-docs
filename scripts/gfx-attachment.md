@@ -57,21 +57,17 @@ end)
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: getAttachments", function(source, weaponName
-TriggerCallback('getAttachments", function(source, weaponName', function(result)
+-- Callback: getAttachments
+TriggerCallback('getAttachments', function(result)
+    -- Parameters to send:  weaponName
     -- Handle result
-end)
+end,  weaponName)
 
--- Callback: getAttachments", function(source, weaponName
-TriggerCallback('getAttachments", function(source, weaponName', function(result)
-    -- Handle result
-end)
-
--- Callback: getWeapons", function(source
-TriggerCallback('getWeapons", function(source', function(result)
+-- Callback: getWeapons
+TriggerCallback('getWeapons', function(result)
     -- Handle result
 end)
 

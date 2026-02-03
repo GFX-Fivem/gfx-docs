@@ -44,23 +44,26 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: aty_gps:server:spectate", function(src, cb, target
-TriggerCallback('aty_gps:server:spectate", function(src, cb, target', function(result)
+-- Callback: aty_gps:server:getCoords
+TriggerCallback('aty_gps:server:getCoords', function(result)
+    -- Parameters to send: _, cb, src
     -- Handle result
-end)
+end, _, cb, src)
 
--- Callback: aty_gps:server:getData", function(src, cb
-TriggerCallback('aty_gps:server:getData", function(src, cb', function(result)
+-- Callback: aty_gps:server:getData
+TriggerCallback('aty_gps:server:getData', function(result)
+    -- Parameters to send: src, cb
     -- Handle result
-end)
+end, src, cb)
 
--- Callback: aty_gps:server:getCoords", function(_, cb, src
-TriggerCallback('aty_gps:server:getCoords", function(_, cb, src', function(result)
+-- Callback: aty_gps:server:spectate
+TriggerCallback('aty_gps:server:spectate', function(result)
+    -- Parameters to send: src, cb, target
     -- Handle result
-end)
+end, src, cb, target)
 
 ```
 

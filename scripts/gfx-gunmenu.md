@@ -56,18 +56,20 @@ end)
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: gfx-gun:validItem", function(source, data
-TriggerCallback('gfx-gun:validItem", function(source, data', function(result)
+-- Callback: gfx-gun:validItem
+TriggerCallback('gfx-gun:validItem', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: gfx-mdt:buyWeapon", function(source, data
-TriggerCallback('gfx-mdt:buyWeapon", function(source, data', function(result)
+-- Callback: gfx-mdt:buyWeapon
+TriggerCallback('gfx-mdt:buyWeapon', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
 ```
 

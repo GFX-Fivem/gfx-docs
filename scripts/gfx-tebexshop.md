@@ -61,53 +61,59 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: gfx-tebexshop:getPlayerSkins', function(source
-TriggerCallback('gfx-tebexshop:getPlayerSkins', function(source', function(result)
+-- Callback: gfx-tebexshop:buyBoost
+TriggerCallback('gfx-tebexshop:buyBoost', function(result)
+    -- Parameters to send:  cardData
+    -- Handle result
+end,  cardData)
+
+-- Callback: gfx-tebexshop:buySkin
+TriggerCallback('gfx-tebexshop:buySkin', function(result)
+    -- Parameters to send:  skinId
+    -- Handle result
+end,  skinId)
+
+-- Callback: gfx-tebexshop:buyTier
+TriggerCallback('gfx-tebexshop:buyTier', function(result)
+    -- Parameters to send:  id
+    -- Handle result
+end,  id)
+
+-- Callback: gfx-tebexshop:claimCode
+TriggerCallback('gfx-tebexshop:claimCode', function(result)
+    -- Parameters to send:  code
+    -- Handle result
+end,  code)
+
+-- Callback: gfx-tebexshop:equipSkin
+TriggerCallback('gfx-tebexshop:equipSkin', function(result)
+    -- Parameters to send:  skinId
+    -- Handle result
+end,  skinId)
+
+-- Callback: gfx-tebexshop:getPlayerSkins
+TriggerCallback('gfx-tebexshop:getPlayerSkins', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-tebexshop:claimCode', function(source, code
-TriggerCallback('gfx-tebexshop:claimCode', function(source, code', function(result)
+-- Callback: gfx-tebexshop:getTransactions
+TriggerCallback('gfx-tebexshop:getTransactions', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-tebexshop:getUserData", function(source
-TriggerCallback('gfx-tebexshop:getUserData", function(source', function(result)
+-- Callback: gfx-tebexshop:getUserData
+TriggerCallback('gfx-tebexshop:getUserData', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-tebexshop:buyBoost', function(source, cardData
-TriggerCallback('gfx-tebexshop:buyBoost', function(source, cardData', function(result)
+-- Callback: gfx-tebexshop:refundTransaction
+TriggerCallback('gfx-tebexshop:refundTransaction', function(result)
+    -- Parameters to send:  transactionId
     -- Handle result
-end)
-
--- Callback: gfx-tebexshop:buyTier', function(source, id
-TriggerCallback('gfx-tebexshop:buyTier', function(source, id', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-tebexshop:buySkin', function(source, skinId
-TriggerCallback('gfx-tebexshop:buySkin', function(source, skinId', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-tebexshop:equipSkin', function(source, skinId
-TriggerCallback('gfx-tebexshop:equipSkin', function(source, skinId', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-tebexshop:getTransactions', function(source
-TriggerCallback('gfx-tebexshop:getTransactions', function(source', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-tebexshop:refundTransaction', function(source, transactionId
-TriggerCallback('gfx-tebexshop:refundTransaction', function(source, transactionId', function(result)
-    -- Handle result
-end)
+end,  transactionId)
 
 ```
 

@@ -75,36 +75,39 @@ end)
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: getHomepageData", function(source
-TriggerCallback('getHomepageData", function(source', function(result)
+-- Callback: getHomepageData
+TriggerCallback('getHomepageData', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-arena:CreateLobby", function(source, data
-TriggerCallback('gfx-arena:CreateLobby", function(source, data', function(result)
+-- Callback: gfx-arena:CreateLobby
+TriggerCallback('gfx-arena:CreateLobby', function(result)
+    -- Parameters to send:  data
+    -- Handle result
+end,  data)
+
+-- Callback: gfx-arena:GetLobbies
+TriggerCallback('gfx-arena:GetLobbies', function(result)
+    -- Parameters to send:  filter
+    -- Handle result
+end,  filter)
+
+-- Callback: gfx-arena:JoinLobby
+TriggerCallback('gfx-arena:JoinLobby', function(result)
+    -- Parameters to send:  data
+    -- Handle result
+end,  data)
+
+-- Callback: gfx-arena:LeaveLobby
+TriggerCallback('gfx-arena:LeaveLobby', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-arena:JoinLobby", function(source, data
-TriggerCallback('gfx-arena:JoinLobby", function(source, data', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-arena:LeaveLobby", function(source
-TriggerCallback('gfx-arena:LeaveLobby", function(source', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-arena:SetReady", function(source
-TriggerCallback('gfx-arena:SetReady", function(source', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-arena:GetLobbies", function(source, filter
-TriggerCallback('gfx-arena:GetLobbies", function(source, filter', function(result)
+-- Callback: gfx-arena:SetReady
+TriggerCallback('gfx-arena:SetReady', function(result)
     -- Handle result
 end)
 

@@ -251,78 +251,87 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: gfx-weed:sync:getCoords", function(
-TriggerCallback('gfx-weed:sync:getCoords", function(', function(result)
+-- Callback: gfx-weed:debug:setWeedValue
+TriggerCallback('gfx-weed:debug:setWeedValue', function(result)
+    -- Parameters to send:  id, key, value
+    -- Handle result
+end,  id, key, value)
+
+-- Callback: gfx-weed:destroy
+TriggerCallback('gfx-weed:destroy', function(result)
+    -- Parameters to send:  id
+    -- Handle result
+end,  id)
+
+-- Callback: gfx-weed:fertilize
+TriggerCallback('gfx-weed:fertilize', function(result)
+    -- Parameters to send:  id
+    -- Handle result
+end,  id)
+
+-- Callback: gfx-weed:harvest:seeds
+TriggerCallback('gfx-weed:harvest:seeds', function(result)
+    -- Parameters to send:  id
+    -- Handle result
+end,  id)
+
+-- Callback: gfx-weed:harvest
+TriggerCallback('gfx-weed:harvest', function(result)
+    -- Parameters to send:  id
+    -- Handle result
+end,  id)
+
+-- Callback: gfx-weed:HasEnoughWeed
+TriggerCallback('gfx-weed:HasEnoughWeed', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-weed:plant", function(source, coords, genetics, quality
-TriggerCallback('gfx-weed:plant", function(source, coords, genetics, quality', function(result)
+-- Callback: gfx-weed:hasItem
+TriggerCallback('gfx-weed:hasItem', function(result)
+    -- Parameters to send:  item, amount
+    -- Handle result
+end,  item, amount)
+
+-- Callback: gfx-weed:plant
+TriggerCallback('gfx-weed:plant', function(result)
+    -- Parameters to send:  coords, genetics, quality
+    -- Handle result
+end,  coords, genetics, quality)
+
+-- Callback: gfx-weed:RequestSell
+TriggerCallback('gfx-weed:RequestSell', function(result)
+    -- Parameters to send:  model
+    -- Handle result
+end,  model)
+
+-- Callback: gfx-weed:server:getBudAmount
+TriggerCallback('gfx-weed:server:getBudAmount', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-weed:water", function(source, id
-TriggerCallback('gfx-weed:water", function(source, id', function(result)
+-- Callback: gfx-weed:server:getPaperAmount
+TriggerCallback('gfx-weed:server:getPaperAmount', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-weed:fertilize", function(source, id
-TriggerCallback('gfx-weed:fertilize", function(source, id', function(result)
+-- Callback: gfx-weed:server:rollJoint
+TriggerCallback('gfx-weed:server:rollJoint', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-weed:destroy", function(source, id
-TriggerCallback('gfx-weed:destroy", function(source, id', function(result)
+-- Callback: gfx-weed:sync:getCoords
+TriggerCallback('gfx-weed:sync:getCoords', function(result)
     -- Handle result
 end)
 
--- Callback: gfx-weed:harvest", function(source, id
-TriggerCallback('gfx-weed:harvest", function(source, id', function(result)
+-- Callback: gfx-weed:water
+TriggerCallback('gfx-weed:water', function(result)
+    -- Parameters to send:  id
     -- Handle result
-end)
-
--- Callback: gfx-weed:harvest:seeds", function(source, id
-TriggerCallback('gfx-weed:harvest:seeds", function(source, id', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-weed:debug:setWeedValue", function(source, id, key, value
-TriggerCallback('gfx-weed:debug:setWeedValue", function(source, id, key, value', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-weed:hasItem", function(source, item, amount
-TriggerCallback('gfx-weed:hasItem", function(source, item, amount', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-weed:server:getBudAmount", function(source
-TriggerCallback('gfx-weed:server:getBudAmount", function(source', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-weed:server:getPaperAmount", function(source
-TriggerCallback('gfx-weed:server:getPaperAmount", function(source', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-weed:server:rollJoint", function(source
-TriggerCallback('gfx-weed:server:rollJoint", function(source', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-weed:RequestSell', function(source, model
-TriggerCallback('gfx-weed:RequestSell', function(source, model', function(result)
-    -- Handle result
-end)
-
--- Callback: gfx-weed:HasEnoughWeed', function(source
-TriggerCallback('gfx-weed:HasEnoughWeed', function(source', function(result)
-    -- Handle result
-end)
+end,  id)
 
 ```
 

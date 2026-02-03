@@ -51,18 +51,20 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: leaderboard:getList", function(source, id, type
-TriggerCallback('leaderboard:getList", function(source, id, type', function(result)
+-- Callback: leaderboard:getList
+TriggerCallback('leaderboard:getList', function(result)
+    -- Parameters to send:  id, type
     -- Handle result
-end)
+end,  id, type)
 
--- Callback: leaderboard:getPlayerSkin", function(source, type
-TriggerCallback('leaderboard:getPlayerSkin", function(source, type', function(result)
+-- Callback: leaderboard:getPlayerSkin
+TriggerCallback('leaderboard:getPlayerSkin', function(result)
+    -- Parameters to send:  type
     -- Handle result
-end)
+end,  type)
 
 ```
 

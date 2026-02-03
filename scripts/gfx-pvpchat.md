@@ -101,26 +101,29 @@ Events that this script triggers (you can listen to these):
 
 ## Callbacks
 
-Server callbacks you can trigger:
+Server callbacks you can trigger from client:
 
 ```lua
--- Callback: getUsers', function(source
-TriggerCallback('getUsers', function(source', function(result)
+-- Callback: chat:mutePlayer
+TriggerCallback('chat:mutePlayer', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: chat:mutePlayer', function(source, data
-TriggerCallback('chat:mutePlayer', function(source, data', function(result)
+-- Callback: chat:unmutePlayer
+TriggerCallback('chat:unmutePlayer', function(result)
+    -- Parameters to send:  data
     -- Handle result
-end)
+end,  data)
 
--- Callback: chat:unmutePlayer', function(source, data
-TriggerCallback('chat:unmutePlayer', function(source, data', function(result)
+-- Callback: getColor
+TriggerCallback('getColor', function(result)
+    -- Parameters to send:  target
     -- Handle result
-end)
+end,  target)
 
--- Callback: getColor', function(source, target
-TriggerCallback('getColor', function(source, target', function(result)
+-- Callback: getUsers
+TriggerCallback('getUsers', function(result)
     -- Handle result
 end)
 
