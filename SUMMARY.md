@@ -49,6 +49,8 @@
 
 ## Job Scripts
 
+* [Drug Empire](scripts/gfx-drugempire.md)
+
 * [Lumberjack](scripts/gfx-lumberjack.md)
 * [Bus Job](scripts/gfx-busjob.md)
 * [Chicken Farm](scripts/gfx-chickenjob.md)
@@ -106,6 +108,10 @@
 * [MDT](scripts/gfx-mdt.md)
 
 ## Misc Scripts
+
+* [Prop Test](scripts/gfx-proptest.md)
+
+* [Inventory](scripts/gfx-inventory.md)
 
 * [EMP Weapon](scripts/gfx-emp.md)
 * [Stormbreaker](scripts/gfx-stormbreaker.md)
