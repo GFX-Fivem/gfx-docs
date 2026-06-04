@@ -72,6 +72,7 @@
 * [Vehicle Items](scripts/gfx-vehicleitems.md)
 * [Lowrider Duel](scripts/gfx-lowrider.md)
 * [Racing](scripts/gfx-racing.md)
+* [Fuel System](scripts/gfx-fuel.md)
 
 ## Economy Scripts
 
