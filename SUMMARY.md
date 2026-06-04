@@ -100,6 +100,7 @@
 * [Notify](scripts/gfx-notify.md)
 * [DUI Leaderboard](scripts/gfx-dui-lb.md)
 * [Hacker V](scripts/gfx-hacker.md)
+* [Smooth Camera](scripts/gfx-smoothcam.md)
 
 ## Police Scripts
 
