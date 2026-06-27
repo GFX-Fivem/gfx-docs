@@ -24,17 +24,17 @@ A placeable laptop that runs a full macOS-style operating system in-world (rende
 ## Installation
 
 ### 1. Install gfx-lib first
-`gfx-lib` must be installed and started **before** gfx-computer. See [gfx-lib](../core/gfx-lib.md).
+`gfx-lib` must be installed and started **before** gfx-laptop. See [gfx-lib](../core/gfx-lib.md).
 
 ### 2. Copy the resource
-Extract `gfx-computer` into your `resources/` folder. The folder name must be exactly `gfx-computer`.
+Extract `gfx-laptop` into your `resources/` folder. The folder name must be exactly `gfx-laptop`.
 
 ### 3. server.cfg
 ```cfg
 ensure gfx-lib
-ensure gfx-computer
+ensure gfx-laptop
 ```
-> `gfx-lib` must start **before** gfx-computer.
+> `gfx-lib` must start **before** gfx-laptop.
 
 ### 4. Database
 Tables are created automatically on first start (oxmysql). No manual SQL import needed.
@@ -76,37 +76,37 @@ Turn a laptop into a shared work/shop terminal (Settings → **Business Mode**, 
 
 # For Developers
 
-gfx-computer is a small platform — build your own apps and push into a player's laptop. Two surfaces: **Lua exports** (server + client) and the **gfxos JS SDK** (for in-OS iframe apps). Full reference + framework examples live in the resource's `sdk/` folder (`README.md`, `gfxos.js`, `gfxos.mjs`, `gfxos.d.ts`).
+gfx-laptop is a small platform — build your own apps and push into a player's laptop. Two surfaces: **Lua exports** (server + client) and the **gfxos JS SDK** (for in-OS iframe apps). Full reference + framework examples live in the resource's `sdk/` folder (`README.md`, `gfxos.js`, `gfxos.mjs`, `gfxos.d.ts`).
 
 `target` = **server id (number)** or **citizenid (string)**.
 
-## Server exports — `exports['gfx-computer']`
+## Server exports — `exports['gfx-laptop']`
 
 ```lua
 -- notifications + deeplink
-exports['gfx-computer']:Notify(target, { app = 'mail', title = 'Boss', body = 'Come to work', icon = '...' })
-exports['gfx-computer']:OpenApp(target, 'mail', { compose = { to = 'jane@ls.mail', subject = 'Hi', body = '...' } })
-exports['gfx-computer']:CloseApp(target, 'mail')
+exports['gfx-laptop']:Notify(target, { app = 'mail', title = 'Boss', body = 'Come to work', icon = '...' })
+exports['gfx-laptop']:OpenApp(target, 'mail', { compose = { to = 'jane@ls.mail', subject = 'Hi', body = '...' } })
+exports['gfx-laptop']:CloseApp(target, 'mail')
 
 -- photos / gallery
-exports['gfx-computer']:AddPhoto(target, { url = 'https://...', label = 'Receipt' })
+exports['gfx-laptop']:AddPhoto(target, { url = 'https://...', label = 'Receipt' })
 
 -- finder / files
-exports['gfx-computer']:ListFiles(target, parentId)        -- parentId optional → { rows }
-exports['gfx-computer']:ReadFile(target, fileId)           -- { id, name, mime, content }
-exports['gfx-computer']:WriteFile(target, { name = 'note.txt', content = 'hi', mime = 'text/plain' })
-exports['gfx-computer']:DeleteFile(target, fileId)
+exports['gfx-laptop']:ListFiles(target, parentId)        -- parentId optional → { rows }
+exports['gfx-laptop']:ReadFile(target, fileId)           -- { id, name, mime, content }
+exports['gfx-laptop']:WriteFile(target, { name = 'note.txt', content = 'hi', mime = 'text/plain' })
+exports['gfx-laptop']:DeleteFile(target, fileId)
 
 -- mail
-exports['gfx-computer']:SendMail(target, { sender = 'Bank', subject = 'Statement', body = '...' })
+exports['gfx-laptop']:SendMail(target, { sender = 'Bank', subject = 'Statement', body = '...' })
 
 -- identity / state
-exports['gfx-computer']:GetUser(target)                    -- { citizenid, name, email }
-exports['gfx-computer']:GetTheme(target)                   -- 'light' | 'dark'
-exports['gfx-computer']:IsLaptopOpen(target)               -- boolean
+exports['gfx-laptop']:GetUser(target)                    -- { citizenid, name, email }
+exports['gfx-laptop']:GetTheme(target)                   -- 'light' | 'dark'
+exports['gfx-laptop']:IsLaptopOpen(target)               -- boolean
 
 -- register / unregister your app (shows in the App Market & dock)
-exports['gfx-computer']:RegisterApp({
+exports['gfx-laptop']:RegisterApp({
   id = 'myapp', name = 'My App',
   icon = 'https://.../icon.png',                 -- dock/market icon (fills the slot)
   iconDark = 'https://.../icon-dark.png',         -- optional: adaptive icon used in DARK theme
@@ -114,13 +114,13 @@ exports['gfx-computer']:RegisterApp({
   url = ('nui://%s/web/index.html'):format(GetCurrentResourceName()),
   store = { developer = 'You', category = 'Tools', price = 0, description = '...' },
 })
-exports['gfx-computer']:UnregisterApp('myapp')
+exports['gfx-laptop']:UnregisterApp('myapp')
 ```
 
 ## Client exports (local player's open laptop)
 ```lua
-exports['gfx-computer']:Notify({ app = 'myapp', title = 'Hi', body = '...' })
-exports['gfx-computer']:OpenApp('mail', { compose = { to = '...' } })
+exports['gfx-laptop']:Notify({ app = 'myapp', title = 'Hi', body = '...' })
+exports['gfx-laptop']:OpenApp('mail', { compose = { to = '...' } })
 ```
 
 ## Events
@@ -157,12 +157,15 @@ gfxos.on('theme', ({ theme }) => document.body.dataset.theme = theme);    // liv
 
 > Storage is **per-app** and per-user (server-persisted). Money/installs are never exposed to iframes — they stay server-validated via the App Market.
 
+### Keyboard input
+The laptop renders on a DUI prop, which receives no real keystrokes — the OS forwards them. **Just include the gfxos SDK** (`gfxos.js` or `gfxos.mjs`) and typing into your app's `<input>`/`<textarea>`/`contentEditable` works automatically; the SDK applies the forwarded keys to your focused field (controlled React inputs included). No setup beyond loading the SDK.
+
 ## Widgets
 
 Add a `widget` to `RegisterApp` and your app gets a Notification-Center / desktop widget (an iframe of your widget page). You control the size, the allowed shapes and the default; the user can place it and switch shape (square ↔ rectangle) unless you lock it.
 
 ```lua
-exports['gfx-computer']:RegisterApp({
+exports['gfx-laptop']:RegisterApp({
   id = 'myapp', name = 'My App', url = 'nui://my-resource/web/index.html',
   widget = {
     url = 'nui://my-resource/web/widget.html',   -- widget page (defaults to the app url)
@@ -183,7 +186,7 @@ The widget iframe gets `&widget=1&shape=sm|wide`; changing shape reloads it so y
 
 ## Troubleshooting
 - **App Market shows "no resources found" on Keymaster upload:** manifest must be UTF-8 **no BOM**; zip with 7-Zip (not `Compress-Archive`); bump `version`.
-- **Join error "resource.rpf failed / HTTP 500":** the `cache/files/gfx-computer` was cleared without restarting — run `restart gfx-computer` on the server.
+- **Join error "resource.rpf failed / HTTP 500":** the `cache/files/gfx-laptop` was cleared without restarting — run `restart gfx-laptop` on the server.
 - **Soundify hidden:** set `Config.Music.YouTubeApiKey` (and enable YouTube Data API v3 on the key).
 
 ## Source

@@ -46,7 +46,7 @@
 * [Vote](scripts/gfx-vote.md)
 * [Truth or Dare](scripts/gfx-truthordare.md)
 * [Tabu](scripts/gfx-tabu.md)
-* [Computer](scripts/gfx-computer.md)
+* [Laptop](scripts/gfx-laptop.md)
 
 ## Job Scripts
 
