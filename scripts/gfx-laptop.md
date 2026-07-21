@@ -1,4 +1,4 @@
-# GFX Computer
+# GFX Laptop
 
 A placeable laptop that runs a full macOS-style operating system in-world (rendered on the laptop prop via DUI). Mail, Files, Photos, Notes, Maps, Weather, a crypto exchange, a music player, an App Market, Business Mode for shared/work laptops, spatial audio, and a **developer SDK** so other resources can build their own apps.
 
